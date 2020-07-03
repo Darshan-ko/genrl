@@ -1,0 +1,831 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>genrl.classical.bandit.policies package &mdash; GenRL 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> GenRL
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="algorithms/index.html">Algorithms</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GenRL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>genrl.classical.bandit.policies package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/genrl.classical.bandit.policies.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="genrl-classical-bandit-policies-package">
+<h1>genrl.classical.bandit.policies package<a class="headerlink" href="#genrl-classical-bandit-policies-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-genrl.classical.bandit.policies.base">
+<span id="genrl-classical-bandit-policies-base-module"></span><h2>genrl.classical.bandit.policies.base module<a class="headerlink" href="#module-genrl.classical.bandit.policies.base" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.classical.bandit.policies.base.BanditPolicy">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.classical.bandit.policies.base.</code><code class="sig-name descname">BanditPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bandit</span><span class="p">:</span> <span class="n"><a class="reference internal" href="algorithms/bandits/genrl.classical.bandit.html#genrl.classical.bandit.bandits.Bandit" title="genrl.classical.bandit.bandits.Bandit">genrl.classical.bandit.bandits.Bandit</a></span></em>, <em class="sig-param"><span class="n">requires_init_run</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.classical.bandit.policies.base.BanditPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Base Class for Multi-armed Bandit solving Policy</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bandit</strong> (<em>Bandit type object</em>) – The Bandit to solve</p></li>
+<li><p><strong>requires_init_run</strong> – Indicated if initialisation of quality values is required</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.base.BanditPolicy.action_hist">
+<em class="property">property </em><code class="sig-name descname">action_hist</code><a class="headerlink" href="#genrl.classical.bandit.policies.base.BanditPolicy.action_hist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the history of actions taken</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of actions</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.base.BanditPolicy.counts">
+<em class="property">property </em><code class="sig-name descname">counts</code><a class="headerlink" href="#genrl.classical.bandit.policies.base.BanditPolicy.counts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of times each action has been taken</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Numpy array with count for each action</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.base.BanditPolicy.learn">
+<code class="sig-name descname">learn</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n_timesteps</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1000</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.classical.bandit.policies.base.BanditPolicy.learn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Learn to solve the environment over given number of timesteps</p>
+<p>Selects action, takes a step in the bandit and then updates
+the parameters according to the reward received. If policy
+requires an initial run, it takes each action once before starting</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>n_timesteps</strong> – number of steps to learn for</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.base.BanditPolicy.regret">
+<em class="property">property </em><code class="sig-name descname">regret</code><a class="headerlink" href="#genrl.classical.bandit.policies.base.BanditPolicy.regret" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current regret</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The current regret</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.base.BanditPolicy.regret_hist">
+<em class="property">property </em><code class="sig-name descname">regret_hist</code><a class="headerlink" href="#genrl.classical.bandit.policies.base.BanditPolicy.regret_hist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the history of regrets computed for each step</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of regrets</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.base.BanditPolicy.reward_hist">
+<em class="property">property </em><code class="sig-name descname">reward_hist</code><a class="headerlink" href="#genrl.classical.bandit.policies.base.BanditPolicy.reward_hist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the history of rewards received for each step</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of rewards</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.base.BanditPolicy.select_action">
+<code class="sig-name descname">select_action</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">timestep</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#genrl.classical.bandit.policies.base.BanditPolicy.select_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select an action</p>
+<p>This method needs to be implemented in the specific policy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>timestep</strong> (<em>int</em>) – timestep to choose action for</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Selected action</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.base.BanditPolicy.update_params">
+<code class="sig-name descname">update_params</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">action</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">reward</span><span class="p">:</span> <span class="n">float</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.classical.bandit.policies.base.BanditPolicy.update_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update parmeters for the policy</p>
+<p>This method needs to be implemented in the specific policy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>action</strong> (<em>int</em>) – action taken for the step</p></li>
+<li><p><strong>reward</strong> (<em>float</em>) – reward obtained for the step</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.classical.bandit.policies.bayesian">
+<span id="genrl-classical-bandit-policies-bayesian-module"></span><h2>genrl.classical.bandit.policies.bayesian module<a class="headerlink" href="#module-genrl.classical.bandit.policies.bayesian" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.classical.bandit.policies.bayesian.BayesianUCBPolicy">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.classical.bandit.policies.bayesian.</code><code class="sig-name descname">BayesianUCBPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bandit</span><span class="p">:</span> <span class="n"><a class="reference internal" href="algorithms/bandits/genrl.classical.bandit.html#genrl.classical.bandit.bandits.Bandit" title="genrl.classical.bandit.bandits.Bandit">genrl.classical.bandit.bandits.Bandit</a></span></em>, <em class="sig-param"><span class="n">alpha</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">beta</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">confidence</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">3.0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.classical.bandit.policies.bayesian.BayesianUCBPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#genrl.classical.bandit.policies.base.BanditPolicy" title="genrl.classical.bandit.policies.base.BanditPolicy"><code class="xref py py-class docutils literal notranslate"><span class="pre">genrl.classical.bandit.policies.base.BanditPolicy</span></code></a></p>
+<p>Multi-Armed Bandit Solver with Bayesian Upper Confidence Bound
+based Action Selection Strategy.</p>
+<p>Refer to Section 2.7 of Reinforcement Learning: An Introduction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bandit</strong> (<em>Bandit type object</em>) – The Bandit to solve</p></li>
+<li><p><strong>alpha</strong> (<em>float</em>) – alpha value for beta distribution</p></li>
+<li><p><strong>beta</strong> (<em>float</em>) – beta values for beta distibution</p></li>
+<li><p><strong>confidence</strong> (<em>float</em>) – Confidence level which controls degree of exploration</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.bayesian.BayesianUCBPolicy.a">
+<em class="property">property </em><code class="sig-name descname">a</code><a class="headerlink" href="#genrl.classical.bandit.policies.bayesian.BayesianUCBPolicy.a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the alpha value of beta distribution associated with the policy</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>alpha values of the beta distribution</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.bayesian.BayesianUCBPolicy.b">
+<em class="property">property </em><code class="sig-name descname">b</code><a class="headerlink" href="#genrl.classical.bandit.policies.bayesian.BayesianUCBPolicy.b" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the beta value of beta distribution associated with the policy</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>beta values of the beta distribution</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.bayesian.BayesianUCBPolicy.confidence">
+<em class="property">property </em><code class="sig-name descname">confidence</code><a class="headerlink" href="#genrl.classical.bandit.policies.bayesian.BayesianUCBPolicy.confidence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the confidence level which weights the exploration term</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Confidence level which controls degree of exploration</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.bayesian.BayesianUCBPolicy.quality">
+<em class="property">property </em><code class="sig-name descname">quality</code><a class="headerlink" href="#genrl.classical.bandit.policies.bayesian.BayesianUCBPolicy.quality" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the q values for all the actions for alpha, beta and c</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Numpy array of q values for all actions</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.bayesian.BayesianUCBPolicy.select_action">
+<code class="sig-name descname">select_action</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">timestep</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#genrl.classical.bandit.policies.bayesian.BayesianUCBPolicy.select_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select an action according to bayesian upper confidence bound</p>
+<p>Take action that maximises a weighted sum of the quality values and
+a beta distribution paramerterized by alpha and beta
+and weighted by c for each action.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>timestep</strong> (<em>int</em>) – timestep to choose action for</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Selected action</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.bayesian.BayesianUCBPolicy.update_params">
+<code class="sig-name descname">update_params</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">action</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">reward</span><span class="p">:</span> <span class="n">float</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.classical.bandit.policies.bayesian.BayesianUCBPolicy.update_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update parmeters for the policy</p>
+<p>Updates the regret as the difference between max quality value and
+that of the action. Updates the quality values according to the
+reward recieved in this step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>action</strong> (<em>int</em>) – action taken for the step</p></li>
+<li><p><strong>reward</strong> (<em>float</em>) – reward obtained for the step</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.classical.bandit.policies.epsgreedy">
+<span id="genrl-classical-bandit-policies-epsgreedy-module"></span><h2>genrl.classical.bandit.policies.epsgreedy module<a class="headerlink" href="#module-genrl.classical.bandit.policies.epsgreedy" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.classical.bandit.policies.epsgreedy.EpsGreedyPolicy">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.classical.bandit.policies.epsgreedy.</code><code class="sig-name descname">EpsGreedyPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bandit</span><span class="p">:</span> <span class="n"><a class="reference internal" href="algorithms/bandits/genrl.classical.bandit.html#genrl.classical.bandit.bandits.Bandit" title="genrl.classical.bandit.bandits.Bandit">genrl.classical.bandit.bandits.Bandit</a></span></em>, <em class="sig-param"><span class="n">eps</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.05</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.classical.bandit.policies.epsgreedy.EpsGreedyPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#genrl.classical.bandit.policies.base.BanditPolicy" title="genrl.classical.bandit.policies.base.BanditPolicy"><code class="xref py py-class docutils literal notranslate"><span class="pre">genrl.classical.bandit.policies.base.BanditPolicy</span></code></a></p>
+<p>Multi-Armed Bandit Solver with Epsilon Greedy Action Selection Strategy.</p>
+<p>Refer to Section 2.3 of Reinforcement Learning: An Introduction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bandit</strong> (<em>Bandit type object</em>) – The Bandit to solve</p></li>
+<li><p><strong>eps</strong> (<em>float</em>) – Probability with which a random action is to be selected.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.epsgreedy.EpsGreedyPolicy.eps">
+<em class="property">property </em><code class="sig-name descname">eps</code><a class="headerlink" href="#genrl.classical.bandit.policies.epsgreedy.EpsGreedyPolicy.eps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the asscoiated epsilon for the policy</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Probability with which a random action is to be selected</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.epsgreedy.EpsGreedyPolicy.quality">
+<em class="property">property </em><code class="sig-name descname">quality</code><a class="headerlink" href="#genrl.classical.bandit.policies.epsgreedy.EpsGreedyPolicy.quality" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the q values assigned by the policy to all actions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Numpy array of q values for all actions</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.epsgreedy.EpsGreedyPolicy.select_action">
+<code class="sig-name descname">select_action</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">timestep</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#genrl.classical.bandit.policies.epsgreedy.EpsGreedyPolicy.select_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select an action according to epsilon greedy startegy</p>
+<p>A random action is selected with espilon probability over
+the optimal action according to the current quality values to
+encourage exploration of the policy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>t</strong> (<em>int</em>) – timestep to choose action for</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Selected action</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.epsgreedy.EpsGreedyPolicy.update_params">
+<code class="sig-name descname">update_params</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">action</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">reward</span><span class="p">:</span> <span class="n">float</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.classical.bandit.policies.epsgreedy.EpsGreedyPolicy.update_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update parmeters for the policy</p>
+<p>Updates the regret as the difference between max quality value and
+that of the action. Updates the quality values according to the
+reward recieved in this step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>action</strong> (<em>int</em>) – action taken for the step</p></li>
+<li><p><strong>reward</strong> (<em>float</em>) – reward obtained for the step</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.classical.bandit.policies.gradient">
+<span id="genrl-classical-bandit-policies-gradient-module"></span><h2>genrl.classical.bandit.policies.gradient module<a class="headerlink" href="#module-genrl.classical.bandit.policies.gradient" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.classical.bandit.policies.gradient.GradientPolicy">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.classical.bandit.policies.gradient.</code><code class="sig-name descname">GradientPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bandit</span><span class="p">:</span> <span class="n"><a class="reference internal" href="algorithms/bandits/genrl.classical.bandit.html#genrl.classical.bandit.bandits.Bandit" title="genrl.classical.bandit.bandits.Bandit">genrl.classical.bandit.bandits.Bandit</a></span></em>, <em class="sig-param"><span class="n">alpha</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.1</span></em>, <em class="sig-param"><span class="n">temp</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.01</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.classical.bandit.policies.gradient.GradientPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#genrl.classical.bandit.policies.base.BanditPolicy" title="genrl.classical.bandit.policies.base.BanditPolicy"><code class="xref py py-class docutils literal notranslate"><span class="pre">genrl.classical.bandit.policies.base.BanditPolicy</span></code></a></p>
+<p>Multi-Armed Bandit Solver with Softmax Action Selection Strategy.</p>
+<p>Refer to Section 2.8 of Reinforcement Learning: An Introduction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bandit</strong> (<em>Bandit type object</em>) – The Bandit to solve</p></li>
+<li><p><strong>alpha</strong> (<em>float</em>) – The step size parameter for gradient based update</p></li>
+<li><p><strong>temp</strong> (<em>float</em>) – Temperature for softmax distribution over quality values of actions</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.gradient.GradientPolicy.alpha">
+<em class="property">property </em><code class="sig-name descname">alpha</code><a class="headerlink" href="#genrl.classical.bandit.policies.gradient.GradientPolicy.alpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the step size parameter for gradient based update of policy</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Step size which controls rate of learning for policy</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.gradient.GradientPolicy.probability_hist">
+<em class="property">property </em><code class="sig-name descname">probability_hist</code><a class="headerlink" href="#genrl.classical.bandit.policies.gradient.GradientPolicy.probability_hist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the history of probabilty values assigned to each action for each timestep</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Numpy array of probability values for all actions</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.gradient.GradientPolicy.quality">
+<em class="property">property </em><code class="sig-name descname">quality</code><a class="headerlink" href="#genrl.classical.bandit.policies.gradient.GradientPolicy.quality" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the q values assigned by the policy to all actions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Numpy array of q values for all actions</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.gradient.GradientPolicy.select_action">
+<code class="sig-name descname">select_action</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">timestep</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#genrl.classical.bandit.policies.gradient.GradientPolicy.select_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select an action according by softmax action selection strategy</p>
+<p>Action is sampled from softmax distribution computed over
+the quality values for all actions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>timestep</strong> (<em>int</em>) – timestep to choose action for</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Selected action</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.gradient.GradientPolicy.temp">
+<em class="property">property </em><code class="sig-name descname">temp</code><a class="headerlink" href="#genrl.classical.bandit.policies.gradient.GradientPolicy.temp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the temperature for softmax distribution over quality values of actions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Temperature which controls softness of softmax distribution</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.gradient.GradientPolicy.update_params">
+<code class="sig-name descname">update_params</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">action</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">reward</span><span class="p">:</span> <span class="n">float</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.classical.bandit.policies.gradient.GradientPolicy.update_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update parmeters for the policy</p>
+<p>Updates the regret as the difference between max quality value and that
+of the action. Updates the quality values through a gradient ascent step</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>action</strong> (<em>int</em>) – action taken for the step</p></li>
+<li><p><strong>reward</strong> (<em>float</em>) – reward obtained for the step</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.classical.bandit.policies.thompson">
+<span id="genrl-classical-bandit-policies-thompson-module"></span><h2>genrl.classical.bandit.policies.thompson module<a class="headerlink" href="#module-genrl.classical.bandit.policies.thompson" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.classical.bandit.policies.thompson.ThompsonSamplingPolicy">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.classical.bandit.policies.thompson.</code><code class="sig-name descname">ThompsonSamplingPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bandit</span><span class="p">:</span> <span class="n"><a class="reference internal" href="algorithms/bandits/genrl.classical.bandit.html#genrl.classical.bandit.bandits.Bandit" title="genrl.classical.bandit.bandits.Bandit">genrl.classical.bandit.bandits.Bandit</a></span></em>, <em class="sig-param"><span class="n">alpha</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">beta</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">1.0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.classical.bandit.policies.thompson.ThompsonSamplingPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#genrl.classical.bandit.policies.base.BanditPolicy" title="genrl.classical.bandit.policies.base.BanditPolicy"><code class="xref py py-class docutils literal notranslate"><span class="pre">genrl.classical.bandit.policies.base.BanditPolicy</span></code></a></p>
+<p>Multi-Armed Bandit Solver with Bayesian Upper Confidence Bound
+based Action Selection Strategy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bandit</strong> (<em>Bandit type object</em>) – The Bandit to solve</p></li>
+<li><p><strong>a</strong> (<em>float</em>) – alpha value for beta distribution</p></li>
+<li><p><strong>b</strong> (<em>float</em>) – beta values for beta distibution</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.thompson.ThompsonSamplingPolicy.a">
+<em class="property">property </em><code class="sig-name descname">a</code><a class="headerlink" href="#genrl.classical.bandit.policies.thompson.ThompsonSamplingPolicy.a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the alpha value of beta distribution associated with the policy</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>alpha values of the beta distribution</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.thompson.ThompsonSamplingPolicy.b">
+<em class="property">property </em><code class="sig-name descname">b</code><a class="headerlink" href="#genrl.classical.bandit.policies.thompson.ThompsonSamplingPolicy.b" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the alpha value of beta distribution associated with the policy</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>alpha values of the beta distribution</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.thompson.ThompsonSamplingPolicy.quality">
+<em class="property">property </em><code class="sig-name descname">quality</code><a class="headerlink" href="#genrl.classical.bandit.policies.thompson.ThompsonSamplingPolicy.quality" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the q values for all the actions for alpha, beta and c</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Numpy array of q values for all actions</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.thompson.ThompsonSamplingPolicy.select_action">
+<code class="sig-name descname">select_action</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">timestep</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#genrl.classical.bandit.policies.thompson.ThompsonSamplingPolicy.select_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select an action according to Thompson Sampling</p>
+<p>Samples are taken from beta distribution parameterized by
+alpha and beta for each action. The action with the highest
+sample is selected.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>timestep</strong> (<em>int</em>) – timestep to choose action for</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Selected action</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.thompson.ThompsonSamplingPolicy.update_params">
+<code class="sig-name descname">update_params</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">action</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">reward</span><span class="p">:</span> <span class="n">float</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.classical.bandit.policies.thompson.ThompsonSamplingPolicy.update_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update parmeters for the policy</p>
+<p>Updates the regret as the difference between max quality value and
+that of the action. Updates the alpha value of beta distribution
+by adding the reward while the beta value is updated by adding
+1 - reward. Update the counts the action taken.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>action</strong> (<em>int</em>) – action taken for the step</p></li>
+<li><p><strong>reward</strong> (<em>int</em>) – reward obtained for the step</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.classical.bandit.policies.ucb">
+<span id="genrl-classical-bandit-policies-ucb-module"></span><h2>genrl.classical.bandit.policies.ucb module<a class="headerlink" href="#module-genrl.classical.bandit.policies.ucb" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.classical.bandit.policies.ucb.UCBPolicy">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.classical.bandit.policies.ucb.</code><code class="sig-name descname">UCBPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bandit</span><span class="p">:</span> <span class="n"><a class="reference internal" href="algorithms/bandits/genrl.classical.bandit.html#genrl.classical.bandit.bandits.Bandit" title="genrl.classical.bandit.bandits.Bandit">genrl.classical.bandit.bandits.Bandit</a></span></em>, <em class="sig-param"><span class="n">confidence</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">1.0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.classical.bandit.policies.ucb.UCBPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#genrl.classical.bandit.policies.base.BanditPolicy" title="genrl.classical.bandit.policies.base.BanditPolicy"><code class="xref py py-class docutils literal notranslate"><span class="pre">genrl.classical.bandit.policies.base.BanditPolicy</span></code></a></p>
+<p>Multi-Armed Bandit Solver with Upper Confidence Bound based
+Action Selection Strategy.</p>
+<p>Refer to Section 2.7 of Reinforcement Learning: An Introduction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bandit</strong> (<em>Bandit type object</em>) – The Bandit to solve</p></li>
+<li><p><strong>c</strong> (<em>float</em>) – Confidence level which controls degree of exploration</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.ucb.UCBPolicy.confidence">
+<em class="property">property </em><code class="sig-name descname">confidence</code><a class="headerlink" href="#genrl.classical.bandit.policies.ucb.UCBPolicy.confidence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the confidence level which weights the exploration term</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Confidence level which controls degree of exploration</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.ucb.UCBPolicy.quality">
+<em class="property">property </em><code class="sig-name descname">quality</code><a class="headerlink" href="#genrl.classical.bandit.policies.ucb.UCBPolicy.quality" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the q values assigned by the policy to all actions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Numpy array of q values for all actions</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.ucb.UCBPolicy.select_action">
+<code class="sig-name descname">select_action</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">timestep</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#genrl.classical.bandit.policies.ucb.UCBPolicy.select_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select an action according to upper confidence bound action selction</p>
+<p>Take action that maximises a weighted sum of the quality values for the action
+and an exploration encouragement term controlled by c.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>timestep</strong> – timestep to choose action for</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Selected action</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.policies.ucb.UCBPolicy.update_params">
+<code class="sig-name descname">update_params</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">action</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">reward</span><span class="p">:</span> <span class="n">float</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.classical.bandit.policies.ucb.UCBPolicy.update_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update parmeters for the policy</p>
+<p>Updates the regret as the difference between max quality value and
+that of the action. Updates the quality values according to the
+reward recieved in this step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>action</strong> (<em>int</em>) – action taken for the step</p></li>
+<li><p><strong>reward</strong> (<em>float</em>) – reward obtained for the step</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.classical.bandit.policies">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-genrl.classical.bandit.policies" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Society for Artificial Intelligence and Deep Learning (SAiDL)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

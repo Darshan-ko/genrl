@@ -1,0 +1,330 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>genrl.deep.agents.ppo1 &mdash; GenRL 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="genrl.deep.agents.vpg" href="genrl.deep.agents.vpg.html" />
+    <link rel="prev" title="genrl.deep.agents.dqn" href="genrl.deep.agents.dqn.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> GenRL
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Algorithms</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Deep</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="genrl.deep.agents.a2c.html">genrl.deep.agents.a2c</a></li>
+<li class="toctree-l3"><a class="reference internal" href="genrl.deep.agents.ddpg.html">genrl.deep.agents.ddpg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="genrl.deep.agents.dqn.html">genrl.deep.agents.dqn</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">genrl.deep.agents.ppo1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-genrl.deep.agents.ppo1.ppo1">genrl.deep.agents.ppo1.ppo1 module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-genrl.deep.agents.ppo1">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="genrl.deep.agents.vpg.html">genrl.deep.agents.vpg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="genrl.deep.agents.td3.html">genrl.deep.agents.td3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="genrl.deep.agents.sac.html">genrl.deep.agents.sac</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../classical/index.html">Classical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bandits/index.html">Bandits</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GenRL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Algorithms</a> &raquo;</li>
+        
+          <li><a href="index.html">Deep</a> &raquo;</li>
+        
+      <li>genrl.deep.agents.ppo1</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/algorithms/deep/genrl.deep.agents.ppo1.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="genrl-deep-agents-ppo1">
+<h1>genrl.deep.agents.ppo1<a class="headerlink" href="#genrl-deep-agents-ppo1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-genrl.deep.agents.ppo1.ppo1">
+<span id="genrl-deep-agents-ppo1-ppo1-module"></span><h2>genrl.deep.agents.ppo1.ppo1 module<a class="headerlink" href="#module-genrl.deep.agents.ppo1.ppo1" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.deep.agents.ppo1.ppo1.PPO1">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.deep.agents.ppo1.ppo1.</code><code class="sig-name descname">PPO1</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">network_type</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">env</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>gym.core.Env<span class="p">, </span><a class="reference internal" href="../../genrl.environments.vec_env.html#genrl.environments.vec_env.vector_envs.VecEnv" title="genrl.environments.vec_env.vector_envs.VecEnv">genrl.environments.vec_env.vector_envs.VecEnv</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">batch_size</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">256</span></em>, <em class="sig-param"><span class="n">gamma</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.99</span></em>, <em class="sig-param"><span class="n">clip_param</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.2</span></em>, <em class="sig-param"><span class="n">epochs</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1000</span></em>, <em class="sig-param"><span class="n">lr_policy</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.001</span></em>, <em class="sig-param"><span class="n">lr_value</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.001</span></em>, <em class="sig-param"><span class="n">layers</span><span class="p">:</span> <span class="n">Tuple</span> <span class="o">=</span> <span class="default_value">64, 64</span></em>, <em class="sig-param"><span class="n">rollout_size</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">2048</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.agents.ppo1.ppo1.PPO1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../../genrl.deep.agents.html#genrl.deep.agents.base.OnPolicyAgent" title="genrl.deep.agents.base.OnPolicyAgent"><code class="xref py py-class docutils literal notranslate"><span class="pre">genrl.deep.agents.base.OnPolicyAgent</span></code></a></p>
+<p>Proximal Policy Optimization algorithm (Clipped policy).</p>
+<p>Paper: <a class="reference external" href="https://arxiv.org/abs/1707.06347">https://arxiv.org/abs/1707.06347</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>network_type</strong> (<em>str</em>) – The deep neural network layer types [‘mlp’]</p></li>
+<li><p><strong>env</strong> (<em>Gym environment</em>) – The environment to learn from</p></li>
+<li><p><strong>timesteps_per_actorbatch</strong> (<em>int</em>) – timesteps per actor per update</p></li>
+<li><p><strong>gamma</strong> (<em>float</em>) – discount factor</p></li>
+<li><p><strong>clip_param</strong> (<em>float</em>) – clipping parameter epsilon</p></li>
+<li><p><strong>actor_batchsize</strong> (<em>int</em>) – trajectories per optimizer epoch</p></li>
+<li><p><strong>epochs</strong> (<em>int</em>) – the optimizer’s number of epochs</p></li>
+<li><p><strong>lr_policy</strong> (<em>float</em>) – policy network learning rate</p></li>
+<li><p><strong>lr_value</strong> (<em>float</em>) – value network learning rate</p></li>
+<li><p><strong>policy_copy_interval</strong> (<em>int</em>) – number of optimizer before copying
+params from new policy to old policy</p></li>
+<li><p><strong>save_interval</strong> (<em>int</em>) – Number of episodes between saves of models</p></li>
+<li><p><strong>seed</strong> (<em>int</em>) – seed for torch and gym</p></li>
+<li><p><strong>device</strong> (<em>string</em>) – device to use for tensor operations; ‘cpu’ for cpu
+and ‘cuda’ for gpu</p></li>
+<li><p><strong>run_num</strong> (<em>boolean</em>) – if model has already been trained</p></li>
+<li><p><strong>save_model</strong> (<em>string</em>) – directory the user wants to save models to</p></li>
+<li><p><strong>load_model</strong> (<em>string</em>) – model loading path</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.deep.agents.ppo1.ppo1.PPO1.create_model">
+<code class="sig-name descname">create_model</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.agents.ppo1.ppo1.PPO1.create_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize all the policy networks in this method, and also         initialize the optimizers and the buffers.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.agents.ppo1.ppo1.PPO1.empty_logs">
+<code class="sig-name descname">empty_logs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.agents.ppo1.ppo1.PPO1.empty_logs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Empties logs</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.agents.ppo1.ppo1.PPO1.evaluate_actions">
+<code class="sig-name descname">evaluate_actions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obs</span></em>, <em class="sig-param"><span class="n">old_actions</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.agents.ppo1.ppo1.PPO1.evaluate_actions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.agents.ppo1.ppo1.PPO1.get_hyperparams">
+<code class="sig-name descname">get_hyperparams</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Dict<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><a class="headerlink" href="#genrl.deep.agents.ppo1.ppo1.PPO1.get_hyperparams" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.agents.ppo1.ppo1.PPO1.get_logging_params">
+<code class="sig-name descname">get_logging_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Dict<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><a class="headerlink" href="#genrl.deep.agents.ppo1.ppo1.PPO1.get_logging_params" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Logging parameters for monitoring training</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.agents.ppo1.ppo1.PPO1.get_traj_loss">
+<code class="sig-name descname">get_traj_loss</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">values</span></em>, <em class="sig-param"><span class="n">dones</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.agents.ppo1.ppo1.PPO1.get_traj_loss" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.agents.ppo1.ppo1.PPO1.select_action">
+<code class="sig-name descname">select_action</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">state</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#genrl.deep.agents.ppo1.ppo1.PPO1.select_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selection of action</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>state</strong> (<em>int</em><em>, </em><em>float</em><em>, </em><em>..</em>) – Observation state</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Action based on the state and epsilon value</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int, float, ..</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.agents.ppo1.ppo1.PPO1.update_policy">
+<code class="sig-name descname">update_policy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.agents.ppo1.ppo1.PPO1.update_policy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.deep.agents.ppo1">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-genrl.deep.agents.ppo1" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="genrl.deep.agents.vpg.html" class="btn btn-neutral float-right" title="genrl.deep.agents.vpg" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="genrl.deep.agents.dqn.html" class="btn btn-neutral float-left" title="genrl.deep.agents.dqn" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Society for Artificial Intelligence and Deep Learning (SAiDL)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

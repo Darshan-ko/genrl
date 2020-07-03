@@ -1,0 +1,518 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>genrl.classical.bandit package &mdash; GenRL 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Bandits" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> GenRL
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Algorithms</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../deep/index.html">Deep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classical/index.html">Classical</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Bandits</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">genrl.classical.bandit package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-genrl.classical.bandit.bandits">genrl.classical.bandit.bandits module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-genrl.classical.bandit.contextual_bandits">genrl.classical.bandit.contextual_bandits module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-genrl.classical.bandit">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GenRL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Algorithms</a> &raquo;</li>
+        
+          <li><a href="index.html">Bandits</a> &raquo;</li>
+        
+      <li>genrl.classical.bandit package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/algorithms/bandits/genrl.classical.bandit.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="genrl-classical-bandit-package">
+<h1>genrl.classical.bandit package<a class="headerlink" href="#genrl-classical-bandit-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-genrl.classical.bandit.bandits">
+<span id="genrl-classical-bandit-bandits-module"></span><h2>genrl.classical.bandit.bandits module<a class="headerlink" href="#module-genrl.classical.bandit.bandits" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.classical.bandit.bandits.Bandit">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.classical.bandit.bandits.</code><code class="sig-name descname">Bandit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arms</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.classical.bandit.bandits.Bandit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Base Class for a Multi-armed Bandit</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>arms</strong> (<em>int</em>) – Number of arms in the bandit</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.classical.bandit.bandits.Bandit.arms">
+<em class="property">property </em><code class="sig-name descname">arms</code><a class="headerlink" href="#genrl.classical.bandit.bandits.Bandit.arms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of arms in the bandit</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Number of arms in the bandit</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.bandits.Bandit.step">
+<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">action</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; Union<span class="p">[</span>int<span class="p">, </span>float<span class="p">]</span><a class="headerlink" href="#genrl.classical.bandit.bandits.Bandit.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes an action in the bandit and returns the sampled reward</p>
+<p>This method needs to be implemented in the specific bandit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>action</strong> (<em>int</em>) – The action to take</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Reward sampled for the action taken</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int, float …</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="genrl.classical.bandit.bandits.BernoulliBandit">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.classical.bandit.bandits.</code><code class="sig-name descname">BernoulliBandit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arms</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em>, <em class="sig-param"><span class="n">reward_probs</span><span class="p">:</span> <span class="n">numpy.ndarray</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.classical.bandit.bandits.BernoulliBandit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#genrl.classical.bandit.bandits.Bandit" title="genrl.classical.bandit.bandits.Bandit"><code class="xref py py-class docutils literal notranslate"><span class="pre">genrl.classical.bandit.bandits.Bandit</span></code></a></p>
+<p>Multi-Armed Bandits with Bernoulli probabilities.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arms</strong> (<em>int</em>) – Number of arms in the bandit</p></li>
+<li><p><strong>reward_probs</strong> – The probability of getting a reward for each action</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.classical.bandit.bandits.BernoulliBandit.reward_probs">
+<em class="property">property </em><code class="sig-name descname">reward_probs</code><a class="headerlink" href="#genrl.classical.bandit.bandits.BernoulliBandit.reward_probs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the probability of reward for each action</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Probability of reward for each action</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.bandits.BernoulliBandit.step">
+<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">action</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#genrl.classical.bandit.bandits.BernoulliBandit.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes an action in the bandit and returns the sampled reward</p>
+<p>A reward of 1 is given with fixed probability.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>action</strong> (<em>int</em>) – The action to take</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Reward sampled for the action taken</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="genrl.classical.bandit.bandits.GaussianBandit">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.classical.bandit.bandits.</code><code class="sig-name descname">GaussianBandit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arms</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em>, <em class="sig-param"><span class="n">rewards</span><span class="p">:</span> <span class="n">numpy.ndarray</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.classical.bandit.bandits.GaussianBandit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#genrl.classical.bandit.bandits.Bandit" title="genrl.classical.bandit.bandits.Bandit"><code class="xref py py-class docutils literal notranslate"><span class="pre">genrl.classical.bandit.bandits.Bandit</span></code></a></p>
+<p>Bandit with Stationary Rewards following a Gaussian distribution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arms</strong> (<em>int</em>) – Number of arms in the bandit</p></li>
+<li><p><strong>rewards</strong> (<em>numpy.ndarray</em>) – The mean for the Gaussain distribution of each action</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.classical.bandit.bandits.GaussianBandit.rewards">
+<em class="property">property </em><code class="sig-name descname">rewards</code><a class="headerlink" href="#genrl.classical.bandit.bandits.GaussianBandit.rewards" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the mean rewards for each action</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Mean reward for each action</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.bandits.GaussianBandit.step">
+<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">action</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#genrl.classical.bandit.bandits.GaussianBandit.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes an action in the bandit and returns the sampled reward</p>
+<p>The reward is sampled from a Gaussian distribution with a fixed mean</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>action</strong> (<em>int</em>) – The action to take</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Reward sampled for the action taken</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.classical.bandit.contextual_bandits">
+<span id="genrl-classical-bandit-contextual-bandits-module"></span><h2>genrl.classical.bandit.contextual_bandits module<a class="headerlink" href="#module-genrl.classical.bandit.contextual_bandits" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.classical.bandit.contextual_bandits.BernoulliCB">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.classical.bandit.contextual_bandits.</code><code class="sig-name descname">BernoulliCB</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bandits</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em>, <em class="sig-param"><span class="n">arms</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em>, <em class="sig-param"><span class="n">reward_probs</span><span class="p">:</span> <span class="n">numpy.ndarray</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.classical.bandit.contextual_bandits.BernoulliCB" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#genrl.classical.bandit.contextual_bandits.ContextualBandit" title="genrl.classical.bandit.contextual_bandits.ContextualBandit"><code class="xref py py-class docutils literal notranslate"><span class="pre">genrl.classical.bandit.contextual_bandits.ContextualBandit</span></code></a></p>
+<p>Contextual Bandit with categorial context and bernoulli reward distribution</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bandits</strong> (<em>int</em>) – Number of bandits</p></li>
+<li><p><strong>arms</strong> (<em>int</em>) – Number of arms in each bandit</p></li>
+<li><p><strong>reward_probs</strong> (<em>numpy.ndarray</em>) – Probabilities of getting rewards</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.classical.bandit.contextual_bandits.BernoulliCB.step">
+<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">action</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#genrl.classical.bandit.contextual_bandits.BernoulliCB.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes an action in the bandit and returns the sampled reward</p>
+<p>The reward is sampled from a bernoulli distribution</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>action</strong> (<em>int</em>) – The action to take</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Reward sampled for the action taken</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="genrl.classical.bandit.contextual_bandits.ContextualBandit">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.classical.bandit.contextual_bandits.</code><code class="sig-name descname">ContextualBandit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bandits</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em>, <em class="sig-param"><span class="n">arms</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.classical.bandit.contextual_bandits.ContextualBandit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Base Class for a Multi-armed Bandit</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bandits</strong> (<em>int</em>) – Number of bandits</p></li>
+<li><p><strong>arms</strong> (<em>int</em>) – Number of arms in each bandit</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.classical.bandit.contextual_bandits.ContextualBandit.arms">
+<em class="property">property </em><code class="sig-name descname">arms</code><a class="headerlink" href="#genrl.classical.bandit.contextual_bandits.ContextualBandit.arms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of arms in each bandit</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Number of arms in each bandit</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.contextual_bandits.ContextualBandit.bandits">
+<em class="property">property </em><code class="sig-name descname">bandits</code><a class="headerlink" href="#genrl.classical.bandit.contextual_bandits.ContextualBandit.bandits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of bandits</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Number of bandits</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.contextual_bandits.ContextualBandit.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#genrl.classical.bandit.contextual_bandits.ContextualBandit.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets the current bandit randomly</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The current bandit as observation</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.bandit.contextual_bandits.ContextualBandit.step">
+<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">action</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; Union<span class="p">[</span>int<span class="p">, </span>float<span class="p">]</span><a class="headerlink" href="#genrl.classical.bandit.contextual_bandits.ContextualBandit.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes an action in the bandit and returns the sampled reward</p>
+<p>This method needs to be implemented in the specific bandit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>action</strong> (<em>int</em>) – The action to take</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Reward sampled for the action taken</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int, float …</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="genrl.classical.bandit.contextual_bandits.GaussianCB">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.classical.bandit.contextual_bandits.</code><code class="sig-name descname">GaussianCB</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bandits</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em>, <em class="sig-param"><span class="n">arms</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em>, <em class="sig-param"><span class="n">reward_means</span><span class="p">:</span> <span class="n">numpy.ndarray</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.classical.bandit.contextual_bandits.GaussianCB" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#genrl.classical.bandit.contextual_bandits.ContextualBandit" title="genrl.classical.bandit.contextual_bandits.ContextualBandit"><code class="xref py py-class docutils literal notranslate"><span class="pre">genrl.classical.bandit.contextual_bandits.ContextualBandit</span></code></a></p>
+<p>Contextual Bandit with categorial context and gaussian reward distribution</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bandits</strong> (<em>int</em>) – Number of bandits</p></li>
+<li><p><strong>arms</strong> (<em>int</em>) – Number of arms in each bandit</p></li>
+<li><p><strong>reward_means</strong> (<em>numpy.ndarray</em>) – Mean of gaussian distribution for each reward</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.classical.bandit.contextual_bandits.GaussianCB.step">
+<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">action</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#genrl.classical.bandit.contextual_bandits.GaussianCB.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes an action in the bandit and returns the sampled reward</p>
+<p>The reward is sampled from a gaussian distribution</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>action</strong> (<em>int</em>) – The action to take</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Reward sampled for the action taken</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.classical.bandit">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-genrl.classical.bandit" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Bandits" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Society for Artificial Intelligence and Deep Learning (SAiDL)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,532 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>genrl.environments.vec_env package &mdash; GenRL 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> GenRL
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="algorithms/index.html">Algorithms</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GenRL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>genrl.environments.vec_env package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/genrl.environments.vec_env.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="genrl-environments-vec-env-package">
+<h1>genrl.environments.vec_env package<a class="headerlink" href="#genrl-environments-vec-env-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-genrl.environments.vec_env.utils">
+<span id="genrl-environments-vec-env-utils-module"></span><h2>genrl.environments.vec_env.utils module<a class="headerlink" href="#module-genrl.environments.vec_env.utils" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.environments.vec_env.utils.RunningMeanStd">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.environments.vec_env.utils.</code><code class="sig-name descname">RunningMeanStd</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">epsilon</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.0001</span></em>, <em class="sig-param"><span class="n">shape</span><span class="p">:</span> <span class="n">Tuple</span> <span class="o">=</span> <span class="default_value">()</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.vec_env.utils.RunningMeanStd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Utility Function to compute a running mean and variance calculator</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>epsilon</strong> (<em>float</em>) – Small number to prevent division by zero for calculations</p></li>
+<li><p><strong>shape</strong> (<em>Tuple</em>) – Shape of the RMS object</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.environments.vec_env.utils.RunningMeanStd.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">batch</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.vec_env.utils.RunningMeanStd.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.environments.vec_env.vec_monitor">
+<span id="genrl-environments-vec-env-vec-monitor-module"></span><h2>genrl.environments.vec_env.vec_monitor module<a class="headerlink" href="#module-genrl.environments.vec_env.vec_monitor" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.environments.vec_env.vec_monitor.VecMonitor">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.environments.vec_env.vec_monitor.</code><code class="sig-name descname">VecMonitor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">venv</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#genrl.environments.vec_env.vector_envs.VecEnv" title="genrl.environments.vec_env.vector_envs.VecEnv">genrl.environments.vec_env.vector_envs.VecEnv</a></span></em>, <em class="sig-param"><span class="n">history_length</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">0</span></em>, <em class="sig-param"><span class="n">info_keys</span><span class="p">:</span> <span class="n">Tuple</span> <span class="o">=</span> <span class="default_value">()</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.vec_env.vec_monitor.VecMonitor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#genrl.environments.vec_env.vec_wrappers.VecEnvWrapper" title="genrl.environments.vec_env.vec_wrappers.VecEnvWrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">genrl.environments.vec_env.vec_wrappers.VecEnvWrapper</span></code></a></p>
+<p>Monitor class for VecEnvs. Saves important variables into the info dictionary</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>venv</strong> (<em>object</em>) – Vectorized Environment</p></li>
+<li><p><strong>history_length</strong> (<em>int</em>) – Length of history for episode rewards and episode lengths</p></li>
+<li><p><strong>info_keys</strong> (<em>tuple</em><em> or </em><em>list</em>) – Important variables to save</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.environments.vec_env.vec_monitor.VecMonitor.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#genrl.environments.vec_env.vec_monitor.VecMonitor.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets Vectorized Environment</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Initial observations</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Numpy Array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.vec_env.vec_monitor.VecMonitor.step">
+<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">actions</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em><span class="sig-paren">)</span> &#x2192; Tuple<a class="headerlink" href="#genrl.environments.vec_env.vec_monitor.VecMonitor.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Steps through all the environments and normalizes the observations and rewards (if enabled)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>actions</strong> (<em>Numpy Array</em>) – Actions to be taken for the Vectorized Environment</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>States, rewards, dones, infos</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.environments.vec_env.vec_normalize">
+<span id="genrl-environments-vec-env-vec-normalize-module"></span><h2>genrl.environments.vec_env.vec_normalize module<a class="headerlink" href="#module-genrl.environments.vec_env.vec_normalize" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.environments.vec_env.vec_normalize.VecNormalize">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.environments.vec_env.vec_normalize.</code><code class="sig-name descname">VecNormalize</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">venv</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#genrl.environments.vec_env.vector_envs.VecEnv" title="genrl.environments.vec_env.vector_envs.VecEnv">genrl.environments.vec_env.vector_envs.VecEnv</a></span></em>, <em class="sig-param"><span class="n">norm_obs</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">norm_reward</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">clip_reward</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">10.0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.vec_env.vec_normalize.VecNormalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#genrl.environments.vec_env.vec_wrappers.VecEnvWrapper" title="genrl.environments.vec_env.vec_wrappers.VecEnvWrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">genrl.environments.vec_env.vec_wrappers.VecEnvWrapper</span></code></a></p>
+<p>Wrapper to implement Normalization of observations and rewards for VecEnvs</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>venv</strong> (<em>Vectorized Environment</em>) – The Vectorized environment</p></li>
+<li><p><strong>n_envs</strong> (<em>int</em>) – Number of environments in VecEnv</p></li>
+<li><p><strong>norm_obs</strong> (<em>bool</em>) – True if observations should be normalized, else False</p></li>
+<li><p><strong>norm_reward</strong> (<em>bool</em>) – True if rewards should be normalized, else False</p></li>
+<li><p><strong>clip_reward</strong> (<em>float</em>) – Maximum absolute value for rewards</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.environments.vec_env.vec_normalize.VecNormalize.close">
+<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.vec_env.vec_normalize.VecNormalize.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close all individual environments in the Vectorized Environment</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.vec_env.vec_normalize.VecNormalize.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#genrl.environments.vec_env.vec_normalize.VecNormalize.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets Vectorized Environment</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Initial observations</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Numpy Array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.vec_env.vec_normalize.VecNormalize.step">
+<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">actions</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em><span class="sig-paren">)</span> &#x2192; Tuple<a class="headerlink" href="#genrl.environments.vec_env.vec_normalize.VecNormalize.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Steps through all the environments and normalizes the observations and rewards (if enabled)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>actions</strong> (<em>Numpy Array</em>) – Actions to be taken for the Vectorized Environment</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>States, rewards, dones, infos</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.environments.vec_env.vec_wrappers">
+<span id="genrl-environments-vec-env-vec-wrappers-module"></span><h2>genrl.environments.vec_env.vec_wrappers module<a class="headerlink" href="#module-genrl.environments.vec_env.vec_wrappers" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.environments.vec_env.vec_wrappers.VecEnvWrapper">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.environments.vec_env.vec_wrappers.</code><code class="sig-name descname">VecEnvWrapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">venv</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.vec_env.vec_wrappers.VecEnvWrapper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#genrl.environments.vec_env.vector_envs.VecEnv" title="genrl.environments.vec_env.vector_envs.VecEnv"><code class="xref py py-class docutils literal notranslate"><span class="pre">genrl.environments.vec_env.vector_envs.VecEnv</span></code></a></p>
+<dl class="py method">
+<dt id="genrl.environments.vec_env.vec_wrappers.VecEnvWrapper.close">
+<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.vec_env.vec_wrappers.VecEnvWrapper.close" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.vec_env.vec_wrappers.VecEnvWrapper.render">
+<code class="sig-name descname">render</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">'human'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.vec_env.vec_wrappers.VecEnvWrapper.render" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.vec_env.vec_wrappers.VecEnvWrapper.reset">
+<em class="property">abstract </em><code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.vec_env.vec_wrappers.VecEnvWrapper.reset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.vec_env.vec_wrappers.VecEnvWrapper.step">
+<em class="property">abstract </em><code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">actions</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.vec_env.vec_wrappers.VecEnvWrapper.step" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.environments.vec_env.vector_envs">
+<span id="genrl-environments-vec-env-vector-envs-module"></span><h2>genrl.environments.vec_env.vector_envs module<a class="headerlink" href="#module-genrl.environments.vec_env.vector_envs" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.environments.vec_env.vector_envs.SerialVecEnv">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.environments.vec_env.vector_envs.</code><code class="sig-name descname">SerialVecEnv</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.vec_env.vector_envs.SerialVecEnv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#genrl.environments.vec_env.vector_envs.VecEnv" title="genrl.environments.vec_env.vector_envs.VecEnv"><code class="xref py py-class docutils literal notranslate"><span class="pre">genrl.environments.vec_env.vector_envs.VecEnv</span></code></a></p>
+<p>Constructs a wrapper for serial execution through envs.</p>
+<dl class="py method">
+<dt id="genrl.environments.vec_env.vector_envs.SerialVecEnv.close">
+<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.vec_env.vector_envs.SerialVecEnv.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Closes all envs</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.vec_env.vector_envs.SerialVecEnv.images">
+<code class="sig-name descname">images</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; List<a class="headerlink" href="#genrl.environments.vec_env.vector_envs.SerialVecEnv.images" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an array of images from each env render</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.vec_env.vector_envs.SerialVecEnv.render">
+<code class="sig-name descname">render</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">'human'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.vec_env.vector_envs.SerialVecEnv.render" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Renders all envs in a tiles format similar to baselines</p>
+<dl class="field-list simple">
+<dt class="field-odd">param mode</dt>
+<dd class="field-odd"><p>(Can either be ‘human’ or ‘rgb_array’. Displays tiled</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt>images in ‘human’ and returns tiled images in ‘rgb_array’)</dt><dd><dl class="field-list simple">
+<dt class="field-odd">type mode</dt>
+<dd class="field-odd"><p>string</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.vec_env.vector_envs.SerialVecEnv.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#genrl.environments.vec_env.vector_envs.SerialVecEnv.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets all envs</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.vec_env.vector_envs.SerialVecEnv.step">
+<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">actions</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em><span class="sig-paren">)</span> &#x2192; Tuple<a class="headerlink" href="#genrl.environments.vec_env.vector_envs.SerialVecEnv.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Steps through all envs serially</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>actions</strong> (<em>Iterable of ints/floats</em>) – Actions from the model</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="genrl.environments.vec_env.vector_envs.SubProcessVecEnv">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.environments.vec_env.vector_envs.</code><code class="sig-name descname">SubProcessVecEnv</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.vec_env.vector_envs.SubProcessVecEnv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#genrl.environments.vec_env.vector_envs.VecEnv" title="genrl.environments.vec_env.vector_envs.VecEnv"><code class="xref py py-class docutils literal notranslate"><span class="pre">genrl.environments.vec_env.vector_envs.VecEnv</span></code></a></p>
+<p>Constructs a wrapper for parallel execution through envs.</p>
+<dl class="py method">
+<dt id="genrl.environments.vec_env.vector_envs.SubProcessVecEnv.close">
+<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.vec_env.vector_envs.SubProcessVecEnv.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Closes all environments and processes</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.vec_env.vector_envs.SubProcessVecEnv.get_spaces">
+<code class="sig-name descname">get_spaces</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Tuple<a class="headerlink" href="#genrl.environments.vec_env.vector_envs.SubProcessVecEnv.get_spaces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns state and action spaces of environments</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.vec_env.vector_envs.SubProcessVecEnv.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#genrl.environments.vec_env.vector_envs.SubProcessVecEnv.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets environments</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>States after environment reset</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.vec_env.vector_envs.SubProcessVecEnv.seed">
+<code class="sig-name descname">seed</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">seed</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.vec_env.vector_envs.SubProcessVecEnv.seed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets seed for reproducability</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.vec_env.vector_envs.SubProcessVecEnv.step">
+<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">actions</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em><span class="sig-paren">)</span> &#x2192; Tuple<a class="headerlink" href="#genrl.environments.vec_env.vector_envs.SubProcessVecEnv.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Steps through environments serially</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>actions</strong> (<em>Iterable of ints/floats</em>) – Actions from the model</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="genrl.environments.vec_env.vector_envs.VecEnv">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.environments.vec_env.vector_envs.</code><code class="sig-name descname">VecEnv</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">envs</span><span class="p">:</span> <span class="n">List</span></em>, <em class="sig-param"><span class="n">n_envs</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">2</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.vec_env.vector_envs.VecEnv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>Base class for multiple environments.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>env</strong> (<em>Gym Environment</em>) – Gym environment to be vectorised</p></li>
+<li><p><strong>n_envs</strong> (<em>int</em>) – Number of environments</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.environments.vec_env.vector_envs.VecEnv.action_spaces">
+<em class="property">property </em><code class="sig-name descname">action_spaces</code><a class="headerlink" href="#genrl.environments.vec_env.vector_envs.VecEnv.action_spaces" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.vec_env.vector_envs.VecEnv.close">
+<em class="property">abstract </em><code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.vec_env.vector_envs.VecEnv.close" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.vec_env.vector_envs.VecEnv.n_envs">
+<em class="property">property </em><code class="sig-name descname">n_envs</code><a class="headerlink" href="#genrl.environments.vec_env.vector_envs.VecEnv.n_envs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.vec_env.vector_envs.VecEnv.observation_spaces">
+<em class="property">property </em><code class="sig-name descname">observation_spaces</code><a class="headerlink" href="#genrl.environments.vec_env.vector_envs.VecEnv.observation_spaces" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.vec_env.vector_envs.VecEnv.reset">
+<em class="property">abstract </em><code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.vec_env.vector_envs.VecEnv.reset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.vec_env.vector_envs.VecEnv.sample">
+<code class="sig-name descname">sample</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; List<a class="headerlink" href="#genrl.environments.vec_env.vector_envs.VecEnv.sample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return samples of actions from each environment</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.vec_env.vector_envs.VecEnv.seed">
+<code class="sig-name descname">seed</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">seed</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.vec_env.vector_envs.VecEnv.seed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set seed for reproducibility in all environments</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.vec_env.vector_envs.VecEnv.step">
+<em class="property">abstract </em><code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">actions</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.vec_env.vector_envs.VecEnv.step" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="genrl.environments.vec_env.vector_envs.worker">
+<code class="sig-prename descclassname">genrl.environments.vec_env.vector_envs.</code><code class="sig-name descname">worker</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent_conn</span><span class="p">:</span> <span class="n">multiprocessing.context.BaseContext.Pipe</span></em>, <em class="sig-param"><span class="n">child_conn</span><span class="p">:</span> <span class="n">multiprocessing.context.BaseContext.Pipe</span></em>, <em class="sig-param"><span class="n">env</span><span class="p">:</span> <span class="n">gym.core.Env</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.vec_env.vector_envs.worker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Worker class to facilitate multiprocessing</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>parent_conn</strong> (<em>Multiprocessing Pipe Connection</em>) – Parent connection of Pipe</p></li>
+<li><p><strong>child_conn</strong> (<em>Multiprocessing Pipe Connection</em>) – Child connection of Pipe</p></li>
+<li><p><strong>env</strong> (<em>Gym Environment</em>) – Gym environment we need multiprocessing for</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.environments.vec_env">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-genrl.environments.vec_env" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Society for Artificial Intelligence and Deep Learning (SAiDL)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

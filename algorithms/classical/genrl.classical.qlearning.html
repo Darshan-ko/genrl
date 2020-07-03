@@ -1,0 +1,315 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>genrl.classical.qlearning &mdash; GenRL 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="genrl.classical.sarsa" href="genrl.classical.sarsa.html" />
+    <link rel="prev" title="Classical" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> GenRL
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Algorithms</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../deep/index.html">Deep</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Classical</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">genrl.classical.qlearning</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-genrl.classical.qlearning.qlearning">genrl.classical.qlearning.qlearning module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-genrl.classical.qlearning">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="genrl.classical.sarsa.html">genrl.classical.sarsa</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bandits/index.html">Bandits</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GenRL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Algorithms</a> &raquo;</li>
+        
+          <li><a href="index.html">Classical</a> &raquo;</li>
+        
+      <li>genrl.classical.qlearning</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/algorithms/classical/genrl.classical.qlearning.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="genrl-classical-qlearning">
+<h1>genrl.classical.qlearning<a class="headerlink" href="#genrl-classical-qlearning" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-genrl.classical.qlearning.qlearning">
+<span id="genrl-classical-qlearning-qlearning-module"></span><h2>genrl.classical.qlearning.qlearning module<a class="headerlink" href="#module-genrl.classical.qlearning.qlearning" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.classical.qlearning.qlearning.QLearning">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.classical.qlearning.qlearning.</code><code class="sig-name descname">QLearning</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">env</span><span class="p">:</span> <span class="n">gym.core.Env</span></em>, <em class="sig-param"><span class="n">epsilon</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.9</span></em>, <em class="sig-param"><span class="n">gamma</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.95</span></em>, <em class="sig-param"><span class="n">lr</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.01</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.classical.qlearning.qlearning.QLearning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Q-Learning Algorithm.</p>
+<p>Paper- <a class="reference external" href="https://link.springer.com/article/10.1007/BF00992698">https://link.springer.com/article/10.1007/BF00992698</a></p>
+<dl class="py attribute">
+<dt id="genrl.classical.qlearning.qlearning.QLearning.env">
+<code class="sig-name descname">env</code><a class="headerlink" href="#genrl.classical.qlearning.qlearning.QLearning.env" title="Permalink to this definition">¶</a></dt>
+<dd><p>Environment with which agent interacts.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>gym.Env</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="genrl.classical.qlearning.qlearning.QLearning.epsilon">
+<code class="sig-name descname">epsilon</code><a class="headerlink" href="#genrl.classical.qlearning.qlearning.QLearning.epsilon" title="Permalink to this definition">¶</a></dt>
+<dd><p>exploration coefficient for epsilon-greedy exploration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="genrl.classical.qlearning.qlearning.QLearning.gamma">
+<code class="sig-name descname">gamma</code><a class="headerlink" href="#genrl.classical.qlearning.qlearning.QLearning.gamma" title="Permalink to this definition">¶</a></dt>
+<dd><p>discount factor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="genrl.classical.qlearning.qlearning.QLearning.lr">
+<code class="sig-name descname">lr</code><a class="headerlink" href="#genrl.classical.qlearning.qlearning.QLearning.lr" title="Permalink to this definition">¶</a></dt>
+<dd><p>learning rate for optimizer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.qlearning.qlearning.QLearning.get_action">
+<code class="sig-name descname">get_action</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">state</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em>, <em class="sig-param"><span class="n">explore</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#genrl.classical.qlearning.qlearning.QLearning.get_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Epsilon greedy selection of epsilon in the explore phase.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> (<em>np.ndarray</em>) – Environment state.</p></li>
+<li><p><strong>explore</strong> (<em>bool</em><em>, </em><em>optional</em>) – True if exploration is required. False if not.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>action.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.qlearning.qlearning.QLearning.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">transition</span><span class="p">:</span> <span class="n">Tuple</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.classical.qlearning.qlearning.QLearning.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the Q table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>transition</strong> (<em>Tuple</em>) – transition 4-tuple used to update Q-table.
+In the form (state, action, reward, next_state)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.classical.qlearning">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-genrl.classical.qlearning" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="genrl.classical.sarsa.html" class="btn btn-neutral float-right" title="genrl.classical.sarsa" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Classical" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Society for Artificial Intelligence and Deep Learning (SAiDL)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

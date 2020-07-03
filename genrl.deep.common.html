@@ -1,0 +1,1853 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>genrl.deep.common package &mdash; GenRL 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> GenRL
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="algorithms/index.html">Algorithms</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GenRL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>genrl.deep.common package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/genrl.deep.common.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="genrl-deep-common-package">
+<h1>genrl.deep.common package<a class="headerlink" href="#genrl-deep-common-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-genrl.deep.common.actor_critic">
+<span id="genrl-deep-common-actor-critic-module"></span><h2>genrl.deep.common.actor_critic module<a class="headerlink" href="#module-genrl.deep.common.actor_critic" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.deep.common.actor_critic.MlpActorCritic">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.deep.common.actor_critic.</code><code class="sig-name descname">MlpActorCritic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">state_dim</span><span class="p">:</span> <span class="n">gym.spaces.space.Space</span></em>, <em class="sig-param"><span class="n">action_dim</span><span class="p">:</span> <span class="n">gym.spaces.space.Space</span></em>, <em class="sig-param"><span class="n">hidden</span><span class="p">:</span> <span class="n">Tuple</span> <span class="o">=</span> <span class="default_value">32, 32</span></em>, <em class="sig-param"><span class="n">val_type</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'V'</span></em>, <em class="sig-param"><span class="n">discrete</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.actor_critic.MlpActorCritic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#genrl.deep.common.base.BaseActorCritic" title="genrl.deep.common.base.BaseActorCritic"><code class="xref py py-class docutils literal notranslate"><span class="pre">genrl.deep.common.base.BaseActorCritic</span></code></a></p>
+<blockquote>
+<div><p>MLP Actor Critic</p>
+<dl class="field-list simple">
+<dt class="field-odd">param state_dim</dt>
+<dd class="field-odd"><p>State dimensions of the environment</p>
+</dd>
+<dt class="field-even">param action_dim</dt>
+<dd class="field-even"><p>Action dimensions of the environment</p>
+</dd>
+<dt class="field-odd">param hidden</dt>
+<dd class="field-odd"><p>Sizes of hidden layers</p>
+</dd>
+<dt class="field-even">param val_type</dt>
+<dd class="field-even"><p>Specifies type of value function: (</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt>“V” for V(s), “Qs” for Q(s), “Qsa” for Q(s,a))</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param discrete</dt>
+<dd class="field-odd"><p>True if action space is discrete, else False</p>
+</dd>
+<dt class="field-even">type state_dim</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">type action_dim</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+<dt class="field-even">type hidden</dt>
+<dd class="field-even"><p>tuple or list</p>
+</dd>
+<dt class="field-odd">type val_type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+<dt class="field-even">type discrete</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="genrl.deep.common.actor_critic.get_actor_critic_from_name">
+<code class="sig-prename descclassname">genrl.deep.common.actor_critic.</code><code class="sig-name descname">get_actor_critic_from_name</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name_</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.actor_critic.get_actor_critic_from_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Actor Critic given the type of the Actor Critic</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ac_name</strong> (<em>str</em>) – Name of the policy needed</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Actor Critic class to be used</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.deep.common.base">
+<span id="genrl-deep-common-base-module"></span><h2>genrl.deep.common.base module<a class="headerlink" href="#module-genrl.deep.common.base" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.deep.common.base.BaseActorCritic">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.deep.common.base.</code><code class="sig-name descname">BaseActorCritic</code><a class="headerlink" href="#genrl.deep.common.base.BaseActorCritic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Basic implementation of a general Actor Critic</p>
+<dl class="py method">
+<dt id="genrl.deep.common.base.BaseActorCritic.get_action">
+<code class="sig-name descname">get_action</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">state</span><span class="p">:</span> <span class="n">torch.Tensor</span></em>, <em class="sig-param"><span class="n">deterministic</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> &#x2192; torch.Tensor<a class="headerlink" href="#genrl.deep.common.base.BaseActorCritic.get_action" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Get action from the Actor based on input</p>
+<dl class="field-list simple">
+<dt class="field-odd">param state</dt>
+<dd class="field-odd"><p>The state being passed as input to the Actor</p>
+</dd>
+<dt class="field-even">param deterministic</dt>
+<dd class="field-even"><p>(True if the action space is deterministic,</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt>else False)</dt><dd><dl class="field-list simple">
+<dt class="field-odd">type state</dt>
+<dd class="field-odd"><p>Tensor</p>
+</dd>
+<dt class="field-even">type deterministic</dt>
+<dd class="field-even"><p>boolean</p>
+</dd>
+<dt class="field-odd">returns</dt>
+<dd class="field-odd"><p>action</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.base.BaseActorCritic.get_value">
+<code class="sig-name descname">get_value</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">state</span><span class="p">:</span> <span class="n">torch.Tensor</span></em><span class="sig-paren">)</span> &#x2192; torch.Tensor<a class="headerlink" href="#genrl.deep.common.base.BaseActorCritic.get_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get value from the Critic based on input</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>state</strong> (<em>Tensor</em>) – Input to the Critic</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>value</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="genrl.deep.common.base.BasePolicy">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.deep.common.base.</code><code class="sig-name descname">BasePolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">state_dim</span><span class="p">:</span> <span class="n">gym.spaces.space.Space</span></em>, <em class="sig-param"><span class="n">action_dim</span><span class="p">:</span> <span class="n">gym.spaces.space.Space</span></em>, <em class="sig-param"><span class="n">hidden</span><span class="p">:</span> <span class="n">Tuple</span></em>, <em class="sig-param"><span class="n">discrete</span><span class="p">:</span> <span class="n">bool</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.base.BasePolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Basic implementation of a general Policy</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_dim</strong> (<em>int</em>) – State dimensions of the environment</p></li>
+<li><p><strong>action_dim</strong> (<em>int</em>) – Action dimensions of the environment</p></li>
+<li><p><strong>hidden</strong> (<em>tuple</em><em> or </em><em>list</em>) – Sizes of hidden layers</p></li>
+<li><p><strong>discrete</strong> (<em>bool</em>) – True if action space is discrete, else False</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.deep.common.base.BasePolicy.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">state</span><span class="p">:</span> <span class="n">torch.Tensor</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>torch.Tensor<span class="p">, </span>Optional<span class="p">[</span>torch.Tensor<span class="p">]</span><span class="p">]</span><a class="headerlink" href="#genrl.deep.common.base.BasePolicy.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>state</strong> (<em>Tensor</em>) – The state being passed as input to the policy</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.base.BasePolicy.get_action">
+<code class="sig-name descname">get_action</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">state</span><span class="p">:</span> <span class="n">torch.Tensor</span></em>, <em class="sig-param"><span class="n">deterministic</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> &#x2192; torch.Tensor<a class="headerlink" href="#genrl.deep.common.base.BasePolicy.get_action" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Get action from policy based on input</p>
+<dl class="field-list simple">
+<dt class="field-odd">param state</dt>
+<dd class="field-odd"><p>The state being passed as input to the policy</p>
+</dd>
+<dt class="field-even">param deterministic</dt>
+<dd class="field-even"><p>(True if the action space is deterministic,</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt>else False)</dt><dd><dl class="field-list simple">
+<dt class="field-odd">type state</dt>
+<dd class="field-odd"><p>Tensor</p>
+</dd>
+<dt class="field-even">type deterministic</dt>
+<dd class="field-even"><p>boolean</p>
+</dd>
+<dt class="field-odd">returns</dt>
+<dd class="field-odd"><p>action</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="genrl.deep.common.base.BaseValue">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.deep.common.base.</code><code class="sig-name descname">BaseValue</code><a class="headerlink" href="#genrl.deep.common.base.BaseValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Basic implementation of a general Value function</p>
+<dl class="py method">
+<dt id="genrl.deep.common.base.BaseValue.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">inp</span><span class="p">:</span> <span class="n">torch.Tensor</span></em><span class="sig-paren">)</span> &#x2192; torch.Tensor<a class="headerlink" href="#genrl.deep.common.base.BaseValue.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>Tensor</em>) – Input to value function</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.base.BaseValue.get_value">
+<code class="sig-name descname">get_value</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">inp</span><span class="p">:</span> <span class="n">torch.Tensor</span></em><span class="sig-paren">)</span> &#x2192; torch.Tensor<a class="headerlink" href="#genrl.deep.common.base.BaseValue.get_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get value from value function based on input</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>Tensor</em>) – Input to value function</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Value</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.deep.common.buffers">
+<span id="genrl-deep-common-buffers-module"></span><h2>genrl.deep.common.buffers module<a class="headerlink" href="#module-genrl.deep.common.buffers" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.deep.common.buffers.PrioritizedBuffer">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.deep.common.buffers.</code><code class="sig-name descname">PrioritizedBuffer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">capacity</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">alpha</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.6</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.buffers.PrioritizedBuffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Implements the Prioritized Experience Replay Mechanism</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>capacity</strong> (<em>int</em>) – Size of the replay buffer</p></li>
+<li><p><strong>alpha</strong> (<em>int</em>) – Level of prioritization</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.deep.common.buffers.PrioritizedBuffer.extend">
+<code class="sig-name descname">extend</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">inp</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.buffers.PrioritizedBuffer.extend" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.buffers.PrioritizedBuffer.get_len">
+<code class="sig-name descname">get_len</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#genrl.deep.common.buffers.PrioritizedBuffer.get_len" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gives number of experiences in buffer currently</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Length of replay memory</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.buffers.PrioritizedBuffer.pos">
+<em class="property">property </em><code class="sig-name descname">pos</code><a class="headerlink" href="#genrl.deep.common.buffers.PrioritizedBuffer.pos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.buffers.PrioritizedBuffer.push">
+<code class="sig-name descname">push</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">inp</span><span class="p">:</span> <span class="n">Tuple</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.deep.common.buffers.PrioritizedBuffer.push" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Adds new experience to buffer</p>
+<dl class="field-list simple">
+<dt class="field-odd">param inp</dt>
+<dd class="field-odd"><p>(Tuple containing <cite>state</cite>, <cite>action</cite>, <cite>reward</cite>,</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt><cite>next_state</cite> and <cite>done</cite>)</dt><dd><dl class="field-list simple">
+<dt class="field-odd">type inp</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+<dt class="field-even">returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.buffers.PrioritizedBuffer.sample">
+<code class="sig-name descname">sample</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">batch_size</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">beta</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.4</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>torch.Tensor<span class="p">, </span>torch.Tensor<span class="p">, </span>torch.Tensor<span class="p">, </span>torch.Tensor<span class="p">, </span>torch.Tensor<span class="p">, </span>torch.Tensor<span class="p">, </span>torch.Tensor<span class="p">]</span><a class="headerlink" href="#genrl.deep.common.buffers.PrioritizedBuffer.sample" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>(Returns randomly sampled memories from replay memory along with their</p>
+</div></blockquote>
+<p>respective indices and weights)</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">param batch_size</dt>
+<dd class="field-odd"><p>Number of samples per batch</p>
+</dd>
+<dt class="field-even">param beta</dt>
+<dd class="field-even"><p>(Bias exponent used to correct</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt>Importance Sampling (IS) weights)</dt><dd><dl class="field-list simple">
+<dt class="field-odd">type batch_size</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+<dt class="field-even">type beta</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+<dt class="field-odd">returns</dt>
+<dd class="field-odd"><p>(Tuple containing <cite>states</cite>, <cite>actions</cite>, <cite>next_states</cite>,</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p><cite>rewards</cite>, <cite>dones</cite>, <cite>indices</cite> and <cite>weights</cite>)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.buffers.PrioritizedBuffer.update_priorities">
+<code class="sig-name descname">update_priorities</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">batch_indices</span><span class="p">:</span> <span class="n">Tuple</span></em>, <em class="sig-param"><span class="n">batch_priorities</span><span class="p">:</span> <span class="n">Tuple</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.deep.common.buffers.PrioritizedBuffer.update_priorities" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Updates list of priorities with new order of priorities</p>
+<dl class="field-list simple">
+<dt class="field-odd">param batch_indices</dt>
+<dd class="field-odd"><p>List of indices of batch</p>
+</dd>
+<dt class="field-even">param batch_priorities</dt>
+<dd class="field-even"><p>(List of priorities of the batch at the</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt>specific indices)</dt><dd><dl class="field-list simple">
+<dt class="field-odd">type batch_indices</dt>
+<dd class="field-odd"><p>list or tuple</p>
+</dd>
+<dt class="field-even">type batch_priorities</dt>
+<dd class="field-even"><p>list or tuple</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="genrl.deep.common.buffers.PushReplayBuffer">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.deep.common.buffers.</code><code class="sig-name descname">PushReplayBuffer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">capacity</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.buffers.PushReplayBuffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Implements the basic Experience Replay Mechanism</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>capacity</strong> (<em>int</em>) – Size of the replay buffer</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.deep.common.buffers.PushReplayBuffer.extend">
+<code class="sig-name descname">extend</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">inp</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.buffers.PushReplayBuffer.extend" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.buffers.PushReplayBuffer.get_len">
+<code class="sig-name descname">get_len</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#genrl.deep.common.buffers.PushReplayBuffer.get_len" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gives number of experiences in buffer currently</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Length of replay memory</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.buffers.PushReplayBuffer.push">
+<code class="sig-name descname">push</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">inp</span><span class="p">:</span> <span class="n">Tuple</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.deep.common.buffers.PushReplayBuffer.push" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds new experience to buffer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>inp</strong> (<em>tuple</em>) – Tuple containing state, action, reward, next_state and done</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.buffers.PushReplayBuffer.sample">
+<code class="sig-name descname">sample</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">batch_size</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>torch.Tensor<span class="p">, </span>torch.Tensor<span class="p">, </span>torch.Tensor<span class="p">, </span>torch.Tensor<span class="p">, </span>torch.Tensor<span class="p">]</span><a class="headerlink" href="#genrl.deep.common.buffers.PushReplayBuffer.sample" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Returns randomly sampled experiences from replay memory</p>
+<dl class="field-list simple">
+<dt class="field-odd">param batch_size</dt>
+<dd class="field-odd"><p>Number of samples per batch</p>
+</dd>
+<dt class="field-even">type batch_size</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">returns</dt>
+<dd class="field-odd"><p>(Tuple composing of <cite>state</cite>, <cite>action</cite>, <cite>reward</cite>,</p>
+</dd>
+</dl>
+</div></blockquote>
+<p><cite>next_state</cite> and <cite>done</cite>)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="genrl.deep.common.buffers.ReplayBuffer">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.deep.common.buffers.</code><code class="sig-name descname">ReplayBuffer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">size</span></em>, <em class="sig-param"><span class="n">env</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.buffers.ReplayBuffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="genrl.deep.common.buffers.ReplayBuffer.extend">
+<code class="sig-name descname">extend</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">inp</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.buffers.ReplayBuffer.extend" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.buffers.ReplayBuffer.push">
+<code class="sig-name descname">push</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">inp</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.buffers.ReplayBuffer.push" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.buffers.ReplayBuffer.sample">
+<code class="sig-name descname">sample</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">batch_size</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.buffers.ReplayBuffer.sample" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.deep.common.logger">
+<span id="genrl-deep-common-logger-module"></span><h2>genrl.deep.common.logger module<a class="headerlink" href="#module-genrl.deep.common.logger" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.deep.common.logger.CSVLogger">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.deep.common.logger.</code><code class="sig-name descname">CSVLogger</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">logdir</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.logger.CSVLogger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>CSV Logging class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>logdir</strong> (<em>string</em>) – Directory to save log at</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.deep.common.logger.CSVLogger.close">
+<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.deep.common.logger.CSVLogger.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close the logger</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.logger.CSVLogger.write">
+<code class="sig-name descname">write</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">kvs</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.deep.common.logger.CSVLogger.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add entry to logger</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kvs</strong> (<em>dict</em>) – Entries to be logged</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="genrl.deep.common.logger.HumanOutputFormat">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.deep.common.logger.</code><code class="sig-name descname">HumanOutputFormat</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">logdir</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.logger.HumanOutputFormat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Output from a log file in a human readable format</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>logdir</strong> (<em>string</em>) – Directory at which log is present</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.deep.common.logger.HumanOutputFormat.close">
+<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.deep.common.logger.HumanOutputFormat.close" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.logger.HumanOutputFormat.max_key_len">
+<code class="sig-name descname">max_key_len</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">kvs</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.deep.common.logger.HumanOutputFormat.max_key_len" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds max key length</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kvs</strong> (<em>dict</em>) – Entries to be logged</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.logger.HumanOutputFormat.round">
+<code class="sig-name descname">round</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">num</span><span class="p">:</span> <span class="n">float</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#genrl.deep.common.logger.HumanOutputFormat.round" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a rounded float value depending on self.maxlen</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>num</strong> (<em>float</em>) – Value to round</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.logger.HumanOutputFormat.write">
+<code class="sig-name descname">write</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">kvs</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.deep.common.logger.HumanOutputFormat.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Log the entry out in human readable format</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kvs</strong> (<em>dict</em>) – Entries to be logged</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.logger.HumanOutputFormat.write_to_file">
+<code class="sig-name descname">write_to_file</code><span class="sig-paren">(</span><em class="sig-param">kvs: Dict[str, Any], file=&lt;_io.TextIOWrapper name='&lt;stdout&gt;' mode='w' encoding='UTF-8'&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.deep.common.logger.HumanOutputFormat.write_to_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Log the entry out in human readable format</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kvs</strong> (<em>dict</em>) – Entries to be logged</p></li>
+<li><p><strong>file</strong> (<em>io.TextIOWrapper</em>) – Name of file to write logs to</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="genrl.deep.common.logger.Logger">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.deep.common.logger.</code><code class="sig-name descname">Logger</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">logdir</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">formats</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">['csv']</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.logger.Logger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Logger class to log important information</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>logdir</strong> (<em>string</em>) – Directory to save log at</p></li>
+<li><p><strong>formats</strong> (<em>list</em>) – Formatting of each log [‘csv’, ‘stdout’, ‘tensorboard’]</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.deep.common.logger.Logger.close">
+<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.deep.common.logger.Logger.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close the logger</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.logger.Logger.formats">
+<em class="property">property </em><code class="sig-name descname">formats</code><a class="headerlink" href="#genrl.deep.common.logger.Logger.formats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return save format(s)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.logger.Logger.logdir">
+<em class="property">property </em><code class="sig-name descname">logdir</code><a class="headerlink" href="#genrl.deep.common.logger.Logger.logdir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return log directory</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.logger.Logger.write">
+<code class="sig-name descname">write</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">kvs</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.deep.common.logger.Logger.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add entry to logger</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kvs</strong> (<em>dict</em>) – Entry to be logged</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="genrl.deep.common.logger.TensorboardLogger">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.deep.common.logger.</code><code class="sig-name descname">TensorboardLogger</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">logdir</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.logger.TensorboardLogger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Tensorboard Logging class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>logdir</strong> (<em>string</em>) – Directory to save log at</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.deep.common.logger.TensorboardLogger.close">
+<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.deep.common.logger.TensorboardLogger.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close the logger</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.logger.TensorboardLogger.write">
+<code class="sig-name descname">write</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">kvs</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.deep.common.logger.TensorboardLogger.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add entry to logger</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kvs</strong> (<em>dict</em>) – Entries to be logged</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="genrl.deep.common.logger.get_logger_by_name">
+<code class="sig-prename descclassname">genrl.deep.common.logger.</code><code class="sig-name descname">get_logger_by_name</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.logger.get_logger_by_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the logger given the type of logger</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>string</em>) – Name of the value function needed</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Logger</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.deep.common.noise">
+<span id="genrl-deep-common-noise-module"></span><h2>genrl.deep.common.noise module<a class="headerlink" href="#module-genrl.deep.common.noise" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.deep.common.noise.ActionNoise">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.deep.common.noise.</code><code class="sig-name descname">ActionNoise</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mean</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">std</span><span class="p">:</span> <span class="n">float</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.noise.ActionNoise" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>Base class for Action Noise</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mean</strong> (<em>float</em>) – Mean of noise distribution</p></li>
+<li><p><strong>std</strong> (<em>float</em>) – Standard deviation of noise distribution</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.deep.common.noise.ActionNoise.mean">
+<em class="property">property </em><code class="sig-name descname">mean</code><a class="headerlink" href="#genrl.deep.common.noise.ActionNoise.mean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns mean of noise distribution</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.noise.ActionNoise.std">
+<em class="property">property </em><code class="sig-name descname">std</code><a class="headerlink" href="#genrl.deep.common.noise.ActionNoise.std" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns standard deviation of noise distribution</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="genrl.deep.common.noise.NormalActionNoise">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.deep.common.noise.</code><code class="sig-name descname">NormalActionNoise</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mean</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">std</span><span class="p">:</span> <span class="n">float</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.noise.NormalActionNoise" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#genrl.deep.common.noise.ActionNoise" title="genrl.deep.common.noise.ActionNoise"><code class="xref py py-class docutils literal notranslate"><span class="pre">genrl.deep.common.noise.ActionNoise</span></code></a></p>
+<p>Normal implementation of Action Noise</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mean</strong> (<em>float</em>) – Mean of noise distribution</p></li>
+<li><p><strong>std</strong> (<em>float</em>) – Standard deviation of noise distribution</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.deep.common.noise.NormalActionNoise.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.deep.common.noise.NormalActionNoise.reset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="genrl.deep.common.noise.OrnsteinUhlenbeckActionNoise">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.deep.common.noise.</code><code class="sig-name descname">OrnsteinUhlenbeckActionNoise</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mean</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">std</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">theta</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.15</span></em>, <em class="sig-param"><span class="n">dt</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.01</span></em>, <em class="sig-param"><span class="n">initial_noise</span><span class="p">:</span> <span class="n">numpy.ndarray</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.noise.OrnsteinUhlenbeckActionNoise" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#genrl.deep.common.noise.ActionNoise" title="genrl.deep.common.noise.ActionNoise"><code class="xref py py-class docutils literal notranslate"><span class="pre">genrl.deep.common.noise.ActionNoise</span></code></a></p>
+<p>Ornstein Uhlenbeck implementation of Action Noise</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mean</strong> (<em>float</em>) – Mean of noise distribution</p></li>
+<li><p><strong>std</strong> (<em>float</em>) – Standard deviation of noise distribution</p></li>
+<li><p><strong>theta</strong> (<em>float</em>) – Parameter used to solve the Ornstein Uhlenbeck process</p></li>
+<li><p><strong>dt</strong> (<em>float</em>) – Small parameter used to solve the Ornstein Uhlenbeck process</p></li>
+<li><p><strong>initial_noise</strong> (<em>Numpy array</em>) – Initial noise distribution</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.deep.common.noise.OrnsteinUhlenbeckActionNoise.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.deep.common.noise.OrnsteinUhlenbeckActionNoise.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the initial noise value for the noise distribution sampling</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.deep.common.policies">
+<span id="genrl-deep-common-policies-module"></span><h2>genrl.deep.common.policies module<a class="headerlink" href="#module-genrl.deep.common.policies" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.deep.common.policies.MlpPolicy">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.deep.common.policies.</code><code class="sig-name descname">MlpPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">state_dim</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">action_dim</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">hidden</span><span class="p">:</span> <span class="n">Tuple</span> <span class="o">=</span> <span class="default_value">32, 32</span></em>, <em class="sig-param"><span class="n">disc</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.policies.MlpPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#genrl.deep.common.base.BasePolicy" title="genrl.deep.common.base.BasePolicy"><code class="xref py py-class docutils literal notranslate"><span class="pre">genrl.deep.common.base.BasePolicy</span></code></a></p>
+<p>MLP Policy</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_dim</strong> (<em>int</em>) – State dimensions of the environment</p></li>
+<li><p><strong>action_dim</strong> (<em>int</em>) – Action dimensions of the environment</p></li>
+<li><p><strong>hidden</strong> (<em>tuple</em><em> or </em><em>list</em>) – Sizes of hidden layers</p></li>
+<li><p><strong>discrete</strong> (<em>bool</em>) – True if action space is discrete, else False</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="genrl.deep.common.policies.get_policy_from_name">
+<code class="sig-prename descclassname">genrl.deep.common.policies.</code><code class="sig-name descname">get_policy_from_name</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name_</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.policies.get_policy_from_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns policy given the name of the policy</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – Name of the policy needed</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Policy Function to be used</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.deep.common.rollout_storage">
+<span id="genrl-deep-common-rollout-storage-module"></span><h2>genrl.deep.common.rollout_storage module<a class="headerlink" href="#module-genrl.deep.common.rollout_storage" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.deep.common.rollout_storage.BaseBuffer">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.deep.common.rollout_storage.</code><code class="sig-name descname">BaseBuffer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">buffer_size</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">observation_space</span><span class="p">:</span> <span class="n">gym.spaces.space.Space</span></em>, <em class="sig-param"><span class="n">action_space</span><span class="p">:</span> <span class="n">gym.spaces.space.Space</span></em>, <em class="sig-param"><span class="n">device</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>torch.device<span class="p">, </span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">'cpu'</span></em>, <em class="sig-param"><span class="n">n_envs</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.rollout_storage.BaseBuffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Base class that represent a buffer (rollout or replay)
+:param buffer_size: (int) Max number of element in the buffer
+:param observation_space: (spaces.Space) Observation space
+:param action_space: (spaces.Space) Action space
+:param device: (Union[torch.device, str]) PyTorch device</p>
+<blockquote>
+<div><p>to which the values will be converted</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>n_envs</strong> – (int) Number of parallel environments</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.deep.common.rollout_storage.BaseBuffer.add">
+<code class="sig-name descname">add</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.deep.common.rollout_storage.BaseBuffer.add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add elements to the buffer.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.rollout_storage.BaseBuffer.extend">
+<code class="sig-name descname">extend</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.deep.common.rollout_storage.BaseBuffer.extend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a new batch of transitions to the buffer</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.rollout_storage.BaseBuffer.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.deep.common.rollout_storage.BaseBuffer.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the buffer.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.rollout_storage.BaseBuffer.sample">
+<code class="sig-name descname">sample</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">batch_size</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.rollout_storage.BaseBuffer.sample" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>batch_size</strong> – (int) Number of element to sample</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Union[RolloutBufferSamples, ReplayBufferSamples])</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.rollout_storage.BaseBuffer.size">
+<code class="sig-name descname">size</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#genrl.deep.common.rollout_storage.BaseBuffer.size" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>(int) The current size of the buffer</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.rollout_storage.BaseBuffer.swap_and_flatten">
+<em class="property">static </em><code class="sig-name descname">swap_and_flatten</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arr</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#genrl.deep.common.rollout_storage.BaseBuffer.swap_and_flatten" title="Permalink to this definition">¶</a></dt>
+<dd><p>Swap and then flatten axes 0 (buffer_size) and 1 (n_envs)
+to convert shape from [n_steps, n_envs, …] (when … is the shape of the features)
+to [n_steps * n_envs, …] (which maintain the order)
+:param arr: (np.ndarray)
+:return: (np.ndarray)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.rollout_storage.BaseBuffer.to_torch">
+<code class="sig-name descname">to_torch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">array</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em>, <em class="sig-param"><span class="n">copy</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span> &#x2192; torch.Tensor<a class="headerlink" href="#genrl.deep.common.rollout_storage.BaseBuffer.to_torch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a numpy array to a PyTorch tensor.
+Note: it copies the data by default
+:param array: (np.ndarray)
+:param copy: (bool) Whether to copy or not the data</p>
+<blockquote>
+<div><p>(may be useful to avoid changing things be reference)</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>(torch.Tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="genrl.deep.common.rollout_storage.ReplayBufferSamples">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.deep.common.rollout_storage.</code><code class="sig-name descname">ReplayBufferSamples</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">observations</span></em>, <em class="sig-param"><span class="n">actions</span></em>, <em class="sig-param"><span class="n">next_observations</span></em>, <em class="sig-param"><span class="n">dones</span></em>, <em class="sig-param"><span class="n">rewards</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.rollout_storage.ReplayBufferSamples" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="py method">
+<dt id="genrl.deep.common.rollout_storage.ReplayBufferSamples.actions">
+<em class="property">property </em><code class="sig-name descname">actions</code><a class="headerlink" href="#genrl.deep.common.rollout_storage.ReplayBufferSamples.actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.rollout_storage.ReplayBufferSamples.dones">
+<em class="property">property </em><code class="sig-name descname">dones</code><a class="headerlink" href="#genrl.deep.common.rollout_storage.ReplayBufferSamples.dones" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 3</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.rollout_storage.ReplayBufferSamples.next_observations">
+<em class="property">property </em><code class="sig-name descname">next_observations</code><a class="headerlink" href="#genrl.deep.common.rollout_storage.ReplayBufferSamples.next_observations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.rollout_storage.ReplayBufferSamples.observations">
+<em class="property">property </em><code class="sig-name descname">observations</code><a class="headerlink" href="#genrl.deep.common.rollout_storage.ReplayBufferSamples.observations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.rollout_storage.ReplayBufferSamples.rewards">
+<em class="property">property </em><code class="sig-name descname">rewards</code><a class="headerlink" href="#genrl.deep.common.rollout_storage.ReplayBufferSamples.rewards" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 4</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="genrl.deep.common.rollout_storage.RolloutBuffer">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.deep.common.rollout_storage.</code><code class="sig-name descname">RolloutBuffer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">buffer_size</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">observation_space</span><span class="p">:</span> <span class="n">gym.spaces.space.Space</span></em>, <em class="sig-param"><span class="n">action_space</span><span class="p">:</span> <span class="n">gym.spaces.space.Space</span></em>, <em class="sig-param"><span class="n">device</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>torch.device<span class="p">, </span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">'cpu'</span></em>, <em class="sig-param"><span class="n">gae_lambda</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">1</span></em>, <em class="sig-param"><span class="n">gamma</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.99</span></em>, <em class="sig-param"><span class="n">n_envs</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.rollout_storage.RolloutBuffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#genrl.deep.common.rollout_storage.BaseBuffer" title="genrl.deep.common.rollout_storage.BaseBuffer"><code class="xref py py-class docutils literal notranslate"><span class="pre">genrl.deep.common.rollout_storage.BaseBuffer</span></code></a></p>
+<p>Rollout buffer used in on-policy algorithms like A2C/PPO.
+:param buffer_size: (int) Max number of element in the buffer
+:param observation_space: (spaces.Space) Observation space
+:param action_space: (spaces.Space) Action space
+:param device: (torch.device)
+:param gae_lambda: (float) Factor for trade-off of bias vs variance for Generalized Advantage Estimator</p>
+<blockquote>
+<div><p>Equivalent to classic advantage when set to 1.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gamma</strong> – (float) Discount factor</p></li>
+<li><p><strong>n_envs</strong> – (int) Number of parallel environments</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.deep.common.rollout_storage.RolloutBuffer.add">
+<code class="sig-name descname">add</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obs</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em>, <em class="sig-param"><span class="n">action</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em>, <em class="sig-param"><span class="n">reward</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em>, <em class="sig-param"><span class="n">done</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em>, <em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n">torch.Tensor</span></em>, <em class="sig-param"><span class="n">log_prob</span><span class="p">:</span> <span class="n">torch.Tensor</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.deep.common.rollout_storage.RolloutBuffer.add" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obs</strong> – (np.ndarray) Observation</p></li>
+<li><p><strong>action</strong> – (np.ndarray) Action</p></li>
+<li><p><strong>reward</strong> – (np.ndarray)</p></li>
+<li><p><strong>done</strong> – (np.ndarray) End of episode signal.</p></li>
+<li><p><strong>value</strong> – (torch.Tensor) estimated value of the current state
+following the current policy.</p></li>
+<li><p><strong>log_prob</strong> – (torch.Tensor) log probability of the action
+following the current policy.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.rollout_storage.RolloutBuffer.compute_returns_and_advantage">
+<code class="sig-name descname">compute_returns_and_advantage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">last_value</span><span class="p">:</span> <span class="n">torch.Tensor</span></em>, <em class="sig-param"><span class="n">dones</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em>, <em class="sig-param"><span class="n">use_gae</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.deep.common.rollout_storage.RolloutBuffer.compute_returns_and_advantage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Post-processing step: compute the returns (sum of discounted rewards)
+and advantage (A(s) = R - V(S)).
+Adapted from Stable-Baselines PPO2.
+:param last_value: (torch.Tensor)
+:param dones: (np.ndarray)
+:param use_gae: (bool) Whether to use Generalized Advantage Estimation</p>
+<blockquote>
+<div><p>or normal advantage for advantage computation.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.rollout_storage.RolloutBuffer.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">batch_size</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Generator[[genrl.deep.common.rollout_storage.RolloutBufferSamples, None], None]<a class="headerlink" href="#genrl.deep.common.rollout_storage.RolloutBuffer.get" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.rollout_storage.RolloutBuffer.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.deep.common.rollout_storage.RolloutBuffer.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the buffer.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="genrl.deep.common.rollout_storage.RolloutBufferSamples">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.deep.common.rollout_storage.</code><code class="sig-name descname">RolloutBufferSamples</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">observations</span></em>, <em class="sig-param"><span class="n">actions</span></em>, <em class="sig-param"><span class="n">old_values</span></em>, <em class="sig-param"><span class="n">old_log_prob</span></em>, <em class="sig-param"><span class="n">advantages</span></em>, <em class="sig-param"><span class="n">returns</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.rollout_storage.RolloutBufferSamples" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="py method">
+<dt id="genrl.deep.common.rollout_storage.RolloutBufferSamples.actions">
+<em class="property">property </em><code class="sig-name descname">actions</code><a class="headerlink" href="#genrl.deep.common.rollout_storage.RolloutBufferSamples.actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.rollout_storage.RolloutBufferSamples.advantages">
+<em class="property">property </em><code class="sig-name descname">advantages</code><a class="headerlink" href="#genrl.deep.common.rollout_storage.RolloutBufferSamples.advantages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 4</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.rollout_storage.RolloutBufferSamples.observations">
+<em class="property">property </em><code class="sig-name descname">observations</code><a class="headerlink" href="#genrl.deep.common.rollout_storage.RolloutBufferSamples.observations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.rollout_storage.RolloutBufferSamples.old_log_prob">
+<em class="property">property </em><code class="sig-name descname">old_log_prob</code><a class="headerlink" href="#genrl.deep.common.rollout_storage.RolloutBufferSamples.old_log_prob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 3</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.rollout_storage.RolloutBufferSamples.old_values">
+<em class="property">property </em><code class="sig-name descname">old_values</code><a class="headerlink" href="#genrl.deep.common.rollout_storage.RolloutBufferSamples.old_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.rollout_storage.RolloutBufferSamples.returns">
+<em class="property">property </em><code class="sig-name descname">returns</code><a class="headerlink" href="#genrl.deep.common.rollout_storage.RolloutBufferSamples.returns" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 5</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="genrl.deep.common.rollout_storage.RolloutReturn">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.deep.common.rollout_storage.</code><code class="sig-name descname">RolloutReturn</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">episode_reward</span></em>, <em class="sig-param"><span class="n">episode_timesteps</span></em>, <em class="sig-param"><span class="n">n_episodes</span></em>, <em class="sig-param"><span class="n">continue_training</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.rollout_storage.RolloutReturn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="py method">
+<dt id="genrl.deep.common.rollout_storage.RolloutReturn.continue_training">
+<em class="property">property </em><code class="sig-name descname">continue_training</code><a class="headerlink" href="#genrl.deep.common.rollout_storage.RolloutReturn.continue_training" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 3</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.rollout_storage.RolloutReturn.episode_reward">
+<em class="property">property </em><code class="sig-name descname">episode_reward</code><a class="headerlink" href="#genrl.deep.common.rollout_storage.RolloutReturn.episode_reward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.rollout_storage.RolloutReturn.episode_timesteps">
+<em class="property">property </em><code class="sig-name descname">episode_timesteps</code><a class="headerlink" href="#genrl.deep.common.rollout_storage.RolloutReturn.episode_timesteps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.rollout_storage.RolloutReturn.n_episodes">
+<em class="property">property </em><code class="sig-name descname">n_episodes</code><a class="headerlink" href="#genrl.deep.common.rollout_storage.RolloutReturn.n_episodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.deep.common.trainer">
+<span id="genrl-deep-common-trainer-module"></span><h2>genrl.deep.common.trainer module<a class="headerlink" href="#module-genrl.deep.common.trainer" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.deep.common.trainer.OffPolicyTrainer">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.deep.common.trainer.</code><code class="sig-name descname">OffPolicyTrainer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">agent</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">env</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>gym.core.Env<span class="p">, </span><a class="reference internal" href="genrl.environments.vec_env.html#genrl.environments.vec_env.vector_envs.VecEnv" title="genrl.environments.vec_env.vector_envs.VecEnv">genrl.environments.vec_env.vector_envs.VecEnv</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">log_mode</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">['stdout']</span></em>, <em class="sig-param"><span class="n">buffer</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>Type<span class="p">[</span><a class="reference internal" href="#genrl.deep.common.buffers.ReplayBuffer" title="genrl.deep.common.buffers.ReplayBuffer">genrl.deep.common.buffers.ReplayBuffer</a><span class="p">]</span><span class="p">, </span>Type<span class="p">[</span><a class="reference internal" href="#genrl.deep.common.buffers.PrioritizedBuffer" title="genrl.deep.common.buffers.PrioritizedBuffer">genrl.deep.common.buffers.PrioritizedBuffer</a><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">off_policy</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">save_interval</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">0</span></em>, <em class="sig-param"><span class="n">render</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">max_ep_len</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1000</span></em>, <em class="sig-param"><span class="n">distributed</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">ckpt_log_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'experiment'</span></em>, <em class="sig-param"><span class="n">steps_per_epoch</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">4000</span></em>, <em class="sig-param"><span class="n">epochs</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">10</span></em>, <em class="sig-param"><span class="n">device</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>torch.device<span class="p">, </span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">'cpu'</span></em>, <em class="sig-param"><span class="n">log_interval</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">10</span></em>, <em class="sig-param"><span class="n">evaluate_episodes</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">500</span></em>, <em class="sig-param"><span class="n">logdir</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'logs'</span></em>, <em class="sig-param"><span class="n">batch_size</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">50</span></em>, <em class="sig-param"><span class="n">seed</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">0</span></em>, <em class="sig-param"><span class="n">deterministic_actions</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">warmup_steps</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1000</span></em>, <em class="sig-param"><span class="n">start_update</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1000</span></em>, <em class="sig-param"><span class="n">update_interval</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">50</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.trainer.OffPolicyTrainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#genrl.deep.common.trainer.Trainer" title="genrl.deep.common.trainer.Trainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">genrl.deep.common.trainer.Trainer</span></code></a></p>
+<blockquote>
+<div><p>Off-Policy Trainer class</p>
+<dl class="field-list simple">
+<dt class="field-odd">param agent</dt>
+<dd class="field-odd"><p>Algorithm object</p>
+</dd>
+<dt class="field-even">param env</dt>
+<dd class="field-even"><p>Environment</p>
+</dd>
+<dt class="field-odd">param logger</dt>
+<dd class="field-odd"><p>Logger object</p>
+</dd>
+<dt class="field-even">param buffer</dt>
+<dd class="field-even"><p>Buffer Object. Cannot be None for Off-policy</p>
+</dd>
+<dt class="field-odd">param off_policy</dt>
+<dd class="field-odd"><p>Is the algorithm off-policy?</p>
+</dd>
+<dt class="field-even">param save_interval</dt>
+<dd class="field-even"><p>Model to save in each of these many timesteps</p>
+</dd>
+<dt class="field-odd">param render</dt>
+<dd class="field-odd"><p>Should the Environment render</p>
+</dd>
+<dt class="field-even">param max_ep_len</dt>
+<dd class="field-even"><p>Max Episode Length</p>
+</dd>
+<dt class="field-odd">param distributed</dt>
+<dd class="field-odd"><p>(Should distributed training be enabled?</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl>
+<dt>(To be implemented))</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param ckpt_log_name</dt>
+<dd class="field-odd"><p>Model checkpoint name</p>
+</dd>
+<dt class="field-even">param steps_per_epochs</dt>
+<dd class="field-even"><p>Steps to take per epoch?</p>
+</dd>
+<dt class="field-odd">param epochs</dt>
+<dd class="field-odd"><p>Total Epochs to train for</p>
+</dd>
+<dt class="field-even">param device</dt>
+<dd class="field-even"><p>Device to train model on</p>
+</dd>
+<dt class="field-odd">param log_interval</dt>
+<dd class="field-odd"><p>Log important params every these many steps</p>
+</dd>
+<dt class="field-even">param batch_size</dt>
+<dd class="field-even"><p>Size of batch</p>
+</dd>
+<dt class="field-odd">param seed</dt>
+<dd class="field-odd"><p>Set seed for reproducibility</p>
+</dd>
+<dt class="field-even">param deterministic_actions</dt>
+<dd class="field-even"><p>Take deterministic actions during training.</p>
+</dd>
+<dt class="field-odd">param warmup_steps</dt>
+<dd class="field-odd"><p>(Observe the environment for these many steps</p>
+</dd>
+</dl>
+</dd>
+<dt>with randomly sampled actions to store in buffer.)</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param start_update</dt>
+<dd class="field-odd"><p>(Starting updating the policy after these</p>
+</dd>
+</dl>
+</dd>
+<dt>many steps)</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param update_interval</dt>
+<dd class="field-odd"><p>Update model policies after number of steps.</p>
+</dd>
+<dt class="field-even">type agent</dt>
+<dd class="field-even"><p>object</p>
+</dd>
+<dt class="field-odd">type env</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+<dt class="field-even">type logger</dt>
+<dd class="field-even"><p>object</p>
+</dd>
+<dt class="field-odd">type buffer</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+<dt class="field-even">type off_policy</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+<p>:type save_interval:int
+:type render: bool
+:type max_ep_len: int
+:type distributed: int
+:type ckpt_log_name: string
+:type steps_per_epochs: int
+:type epochs: int
+:type device: string
+:type log_interval: int
+:type batch_size: int
+:type seed: int
+:type deterministic_actions: bool
+:type warmup_steps: int
+:type start_update: int
+:type update_interval: int</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.deep.common.trainer.OffPolicyTrainer.train">
+<code class="sig-name descname">train</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.deep.common.trainer.OffPolicyTrainer.train" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run training</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="genrl.deep.common.trainer.OnPolicyTrainer">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.deep.common.trainer.</code><code class="sig-name descname">OnPolicyTrainer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">agent</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">env</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>gym.core.Env<span class="p">, </span><a class="reference internal" href="genrl.environments.vec_env.html#genrl.environments.vec_env.vector_envs.VecEnv" title="genrl.environments.vec_env.vector_envs.VecEnv">genrl.environments.vec_env.vector_envs.VecEnv</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">log_mode</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">['stdout']</span></em>, <em class="sig-param"><span class="n">save_interval</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">0</span></em>, <em class="sig-param"><span class="n">render</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">max_ep_len</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1000</span></em>, <em class="sig-param"><span class="n">distributed</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">ckpt_log_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'experiment'</span></em>, <em class="sig-param"><span class="n">steps_per_epoch</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">4000</span></em>, <em class="sig-param"><span class="n">epochs</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">10</span></em>, <em class="sig-param"><span class="n">device</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>torch.device<span class="p">, </span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">'cpu'</span></em>, <em class="sig-param"><span class="n">log_interval</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">10</span></em>, <em class="sig-param"><span class="n">evaluate_episodes</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">500</span></em>, <em class="sig-param"><span class="n">logdir</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'logs'</span></em>, <em class="sig-param"><span class="n">batch_size</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">50</span></em>, <em class="sig-param"><span class="n">seed</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deterministic_actions</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.trainer.OnPolicyTrainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#genrl.deep.common.trainer.Trainer" title="genrl.deep.common.trainer.Trainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">genrl.deep.common.trainer.Trainer</span></code></a></p>
+<blockquote>
+<div><p>Base Trainer class. To be inherited specific usecases.</p>
+<dl class="field-list simple">
+<dt class="field-odd">param agent</dt>
+<dd class="field-odd"><p>Algorithm object</p>
+</dd>
+<dt class="field-even">param env</dt>
+<dd class="field-even"><p>Environment</p>
+</dd>
+<dt class="field-odd">param logger</dt>
+<dd class="field-odd"><p>Logger Object</p>
+</dd>
+<dt class="field-even">param buffer</dt>
+<dd class="field-even"><p>Buffer Object</p>
+</dd>
+<dt class="field-odd">param off_policy</dt>
+<dd class="field-odd"><p>Is the algorithm off-policy?</p>
+</dd>
+<dt class="field-even">param save_interval</dt>
+<dd class="field-even"><p>Model to save in each of these many timesteps</p>
+</dd>
+<dt class="field-odd">param render</dt>
+<dd class="field-odd"><p>Should the Environment render</p>
+</dd>
+<dt class="field-even">param max_ep_len</dt>
+<dd class="field-even"><p>Max Episode Length</p>
+</dd>
+<dt class="field-odd">param distributed</dt>
+<dd class="field-odd"><p>(Should distributed training be enabled?</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl>
+<dt>(To be implemented))</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param ckpt_log_name</dt>
+<dd class="field-odd"><p>Model checkpoint name</p>
+</dd>
+<dt class="field-even">param steps_per_epochs</dt>
+<dd class="field-even"><p>Steps to take per epoch?</p>
+</dd>
+<dt class="field-odd">param epochs</dt>
+<dd class="field-odd"><p>Total Epochs to train for</p>
+</dd>
+<dt class="field-even">param device</dt>
+<dd class="field-even"><p>Device to train model on</p>
+</dd>
+<dt class="field-odd">param log_interval</dt>
+<dd class="field-odd"><p>Log important params every these many steps</p>
+</dd>
+<dt class="field-even">param batch_size</dt>
+<dd class="field-even"><p>Size of batch</p>
+</dd>
+<dt class="field-odd">param seed</dt>
+<dd class="field-odd"><p>Set seed for reproducibility</p>
+</dd>
+<dt class="field-even">param deterministic_actions</dt>
+<dd class="field-even"><p>Take deterministic actions during training.</p>
+</dd>
+<dt class="field-odd">type agent</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+<dt class="field-even">type env</dt>
+<dd class="field-even"><p>object</p>
+</dd>
+<dt class="field-odd">type logger</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+<dt class="field-even">type buffer</dt>
+<dd class="field-even"><p>object</p>
+</dd>
+<dt class="field-odd">type off_policy</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+<p>:type save_interval:int
+:type render: bool
+:type max_ep_len: int
+:type distributed: int
+:type ckpt_log_name: string
+:type steps_per_epochs: int
+:type epochs: int
+:type device: string
+:type log_interval: int
+:type batch_size: int
+:type seed: int
+:type deterministic_actions: bool</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.deep.common.trainer.OnPolicyTrainer.train">
+<code class="sig-name descname">train</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.deep.common.trainer.OnPolicyTrainer.train" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run training.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="genrl.deep.common.trainer.Trainer">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.deep.common.trainer.</code><code class="sig-name descname">Trainer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">agent</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">env</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>gym.core.Env<span class="p">, </span><a class="reference internal" href="genrl.environments.vec_env.html#genrl.environments.vec_env.vector_envs.VecEnv" title="genrl.environments.vec_env.vector_envs.VecEnv">genrl.environments.vec_env.vector_envs.VecEnv</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">log_mode</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">['stdout']</span></em>, <em class="sig-param"><span class="n">buffer</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>Type<span class="p">[</span><a class="reference internal" href="#genrl.deep.common.buffers.ReplayBuffer" title="genrl.deep.common.buffers.ReplayBuffer">genrl.deep.common.buffers.ReplayBuffer</a><span class="p">]</span><span class="p">, </span>Type<span class="p">[</span><a class="reference internal" href="#genrl.deep.common.buffers.PrioritizedBuffer" title="genrl.deep.common.buffers.PrioritizedBuffer">genrl.deep.common.buffers.PrioritizedBuffer</a><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">off_policy</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">save_interval</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">0</span></em>, <em class="sig-param"><span class="n">render</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">max_ep_len</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1000</span></em>, <em class="sig-param"><span class="n">distributed</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">ckpt_log_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'experiment'</span></em>, <em class="sig-param"><span class="n">steps_per_epoch</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">4000</span></em>, <em class="sig-param"><span class="n">epochs</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">10</span></em>, <em class="sig-param"><span class="n">device</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>torch.device<span class="p">, </span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">'cpu'</span></em>, <em class="sig-param"><span class="n">log_interval</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">10</span></em>, <em class="sig-param"><span class="n">evaluate_episodes</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">500</span></em>, <em class="sig-param"><span class="n">logdir</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'logs'</span></em>, <em class="sig-param"><span class="n">batch_size</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">50</span></em>, <em class="sig-param"><span class="n">seed</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deterministic_actions</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">transform</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">history_length</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">4</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.trainer.Trainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<blockquote>
+<div><p>Base Trainer class. To be inherited specific usecases.</p>
+<dl class="field-list simple">
+<dt class="field-odd">param agent</dt>
+<dd class="field-odd"><p>Algorithm object</p>
+</dd>
+<dt class="field-even">param env</dt>
+<dd class="field-even"><p>Environment</p>
+</dd>
+<dt class="field-odd">param logger</dt>
+<dd class="field-odd"><p>Logger object</p>
+</dd>
+<dt class="field-even">param buffer</dt>
+<dd class="field-even"><p>Buffer Object</p>
+</dd>
+<dt class="field-odd">param off_policy</dt>
+<dd class="field-odd"><p>Is the algorithm off-policy?</p>
+</dd>
+<dt class="field-even">param save_interval</dt>
+<dd class="field-even"><p>Model to save in each of these many timesteps</p>
+</dd>
+<dt class="field-odd">param render</dt>
+<dd class="field-odd"><p>Should the Environment render</p>
+</dd>
+<dt class="field-even">param max_ep_len</dt>
+<dd class="field-even"><p>Max Episode Length</p>
+</dd>
+<dt class="field-odd">param distributed</dt>
+<dd class="field-odd"><p>(True if distributed training is enabled, else</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt>False (To be implemented))</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param ckpt_log_name</dt>
+<dd class="field-odd"><p>Model checkpoint name</p>
+</dd>
+<dt class="field-even">param steps_per_epochs</dt>
+<dd class="field-even"><p>Steps to take per epoch?</p>
+</dd>
+<dt class="field-odd">param epochs</dt>
+<dd class="field-odd"><p>Total Epochs to train for</p>
+</dd>
+<dt class="field-even">param device</dt>
+<dd class="field-even"><p>Device to train model on</p>
+</dd>
+<dt class="field-odd">param log_interval</dt>
+<dd class="field-odd"><p>Log important params every these many steps</p>
+</dd>
+<dt class="field-even">param batch_size</dt>
+<dd class="field-even"><p>Size of batch</p>
+</dd>
+<dt class="field-odd">param seed</dt>
+<dd class="field-odd"><p>Set seed for reproducibility</p>
+</dd>
+<dt class="field-even">param deterministic_actions</dt>
+<dd class="field-even"><p>Take deterministic actions during training.</p>
+</dd>
+<dt class="field-odd">type agent</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+<dt class="field-even">type env</dt>
+<dd class="field-even"><p>object</p>
+</dd>
+<dt class="field-odd">type logger</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+<dt class="field-even">type buffer</dt>
+<dd class="field-even"><p>object</p>
+</dd>
+<dt class="field-odd">type off_policy</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+<dt class="field-even">type save_interval</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">type render</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+<dt class="field-even">type max_ep_len</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">type distributed</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+<dt class="field-even">type ckpt_log_name</dt>
+<dd class="field-even"><p>string</p>
+</dd>
+<dt class="field-odd">type steps_per_epochs</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+<dt class="field-even">type epochs</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">type device</dt>
+<dd class="field-odd"><p>string</p>
+</dd>
+<dt class="field-even">type log_interval</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">type batch_size</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+<dt class="field-even">type seed</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">type deterministic_actions</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.deep.common.trainer.Trainer.evaluate">
+<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.deep.common.trainer.Trainer.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate function</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.trainer.Trainer.n_envs">
+<em class="property">property </em><code class="sig-name descname">n_envs</code><a class="headerlink" href="#genrl.deep.common.trainer.Trainer.n_envs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of environments</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.deep.common.trainer.Trainer.train">
+<code class="sig-name descname">train</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.deep.common.trainer.Trainer.train" title="Permalink to this definition">¶</a></dt>
+<dd><p>To be defined in inherited classes</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.deep.common.utils">
+<span id="genrl-deep-common-utils-module"></span><h2>genrl.deep.common.utils module<a class="headerlink" href="#module-genrl.deep.common.utils" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="genrl.deep.common.utils.cnn">
+<code class="sig-prename descclassname">genrl.deep.common.utils.</code><code class="sig-name descname">cnn</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">channels</span><span class="p">:</span> <span class="n">Tuple</span> <span class="o">=</span> <span class="default_value">4, 16, 32</span></em>, <em class="sig-param"><span class="n">kernel_sizes</span><span class="p">:</span> <span class="n">Tuple</span> <span class="o">=</span> <span class="default_value">8, 4</span></em>, <em class="sig-param"><span class="n">strides</span><span class="p">:</span> <span class="n">Tuple</span> <span class="o">=</span> <span class="default_value">4, 2</span></em>, <em class="sig-param"><span class="n">in_size</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">84</span></em><span class="sig-paren">)</span> &#x2192; Tuple<a class="headerlink" href="#genrl.deep.common.utils.cnn" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>(Generates a CNN model given input dimensions, channels, kernel_sizes and</p>
+</div></blockquote>
+<p>strides)</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">param channels</dt>
+<dd class="field-odd"><p>Input output channels before and after each convolution</p>
+</dd>
+<dt class="field-even">param kernel_sizes</dt>
+<dd class="field-even"><p>Kernel sizes for each convolution</p>
+</dd>
+<dt class="field-odd">param strides</dt>
+<dd class="field-odd"><p>Strides for each convolution</p>
+</dd>
+<dt class="field-even">param in_size</dt>
+<dd class="field-even"><p>Input dimensions (assuming square input)</p>
+</dd>
+<dt class="field-odd">type channels</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+<dt class="field-even">type kernel_sizes</dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+<dt class="field-odd">type strides</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+<dt class="field-even">type in_size</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">returns</dt>
+<dd class="field-odd"><p>(Convolutional Neural Network with convolutional layers and</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>activation layers)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="genrl.deep.common.utils.get_action_dim">
+<code class="sig-prename descclassname">genrl.deep.common.utils.</code><code class="sig-name descname">get_action_dim</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">action_space</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.utils.get_action_dim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the dimension of the action space.
+:param action_space: Action space
+:type action_space: gym.spaces.Space
+:returns: Action space’s shape
+:rtype: int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="genrl.deep.common.utils.get_env_properties">
+<code class="sig-prename descclassname">genrl.deep.common.utils.</code><code class="sig-name descname">get_env_properties</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">env</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>gym.core.Env<span class="p">, </span><a class="reference internal" href="genrl.environments.vec_env.html#genrl.environments.vec_env.vector_envs.VecEnv" title="genrl.environments.vec_env.vector_envs.VecEnv">genrl.environments.vec_env.vector_envs.VecEnv</a><span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>int<span class="p">]</span><a class="headerlink" href="#genrl.deep.common.utils.get_env_properties" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Finds important properties of environment</p>
+<dl class="field-list simple">
+<dt class="field-odd">param env</dt>
+<dd class="field-odd"><p>Environment that the agent is interacting with</p>
+</dd>
+<dt class="field-even">type env</dt>
+<dd class="field-even"><p>Gym Environment</p>
+</dd>
+<dt class="field-odd">returns</dt>
+<dd class="field-odd"><p>(State space dimensions, Action space dimensions,</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt>discreteness of action space and action limit (highest action value)</dt><dd><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p>int, float, …; int, float, …; bool; int, float, …</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="genrl.deep.common.utils.get_model">
+<code class="sig-prename descclassname">genrl.deep.common.utils.</code><code class="sig-name descname">get_model</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">type_</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">name_</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; Union<a class="headerlink" href="#genrl.deep.common.utils.get_model" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Utility to get the class of required function</p>
+<dl class="field-list simple">
+<dt class="field-odd">param <a href="#id1"><span class="problematic" id="id2">type_</span></a></dt>
+<dd class="field-odd"><p>“ac” for Actor Critic, “v” for Value, “p” for Policy</p>
+</dd>
+<dt class="field-even">param <a href="#id3"><span class="problematic" id="id4">name_</span></a></dt>
+<dd class="field-even"><p>Name of the specific structure of model. (</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt>Eg. “mlp” or “cnn”)</dt><dd><dl class="field-list simple">
+<dt class="field-odd">type <a href="#id5"><span class="problematic" id="id6">type_</span></a></dt>
+<dd class="field-odd"><p>string</p>
+</dd>
+<dt class="field-even">type <a href="#id7"><span class="problematic" id="id8">name_</span></a></dt>
+<dd class="field-even"><p>string</p>
+</dd>
+<dt class="field-odd">returns</dt>
+<dd class="field-odd"><p>Required class. Eg. MlpActorCritic</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="genrl.deep.common.utils.get_obs_action_shape">
+<code class="sig-prename descclassname">genrl.deep.common.utils.</code><code class="sig-name descname">get_obs_action_shape</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obs</span></em>, <em class="sig-param"><span class="n">action</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.utils.get_obs_action_shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the shapes of observation and action</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obs</strong> (<em>gym.Space</em>) – State space of environment</p></li>
+<li><p><strong>action</strong> (<em>np.array</em>) – Action</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="genrl.deep.common.utils.get_obs_shape">
+<code class="sig-prename descclassname">genrl.deep.common.utils.</code><code class="sig-name descname">get_obs_shape</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">observation_space</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.utils.get_obs_shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the shape of the observation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>observation_space</strong> (<em>gym.spaces.Space</em>) – Observation space</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The observation space’s shape</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(Tuple[int, ..])</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="genrl.deep.common.utils.load_params">
+<code class="sig-prename descclassname">genrl.deep.common.utils.</code><code class="sig-name descname">load_params</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">algo</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.deep.common.utils.load_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function load parameters for an algorithm from a given checkpoint file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>algo</strong> (<em>Object</em>) – The agent object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="genrl.deep.common.utils.mlp">
+<code class="sig-prename descclassname">genrl.deep.common.utils.</code><code class="sig-name descname">mlp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sizes</span><span class="p">:</span> <span class="n">Tuple</span></em>, <em class="sig-param"><span class="n">sac</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.utils.mlp" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Generates an MLP model given sizes of each layer</p>
+<dl class="field-list simple">
+<dt class="field-odd">param sizes</dt>
+<dd class="field-odd"><p>Sizes of hidden layers</p>
+</dd>
+<dt class="field-even">param sac</dt>
+<dd class="field-even"><p>True if Soft Actor Critic is being used, else False</p>
+</dd>
+<dt class="field-odd">type sizes</dt>
+<dd class="field-odd"><p>tuple or list</p>
+</dd>
+<dt class="field-even">type sac</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+<dt class="field-odd">returns</dt>
+<dd class="field-odd"><p>(Neural Network with fully-connected linear layers and</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>activation layers)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="genrl.deep.common.utils.safe_mean">
+<code class="sig-prename descclassname">genrl.deep.common.utils.</code><code class="sig-name descname">safe_mean</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">log</span><span class="p">:</span> <span class="n">List<span class="p">[</span>int<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.utils.safe_mean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns 0 if there are no elements in logs</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="genrl.deep.common.utils.save_params">
+<code class="sig-prename descclassname">genrl.deep.common.utils.</code><code class="sig-name descname">save_params</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">algo</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">timestep</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.deep.common.utils.save_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to save all parameters of a given agent</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>algo</strong> (<em>Object</em>) – The agent object</p></li>
+<li><p><strong>timestep</strong> (<em>int</em>) – The timestep during training at which model is being saved</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="genrl.deep.common.utils.set_seeds">
+<code class="sig-prename descclassname">genrl.deep.common.utils.</code><code class="sig-name descname">set_seeds</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">seed</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">env</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>gym.core.Env<span class="p">, </span><a class="reference internal" href="genrl.environments.vec_env.html#genrl.environments.vec_env.vector_envs.VecEnv" title="genrl.environments.vec_env.vector_envs.VecEnv">genrl.environments.vec_env.vector_envs.VecEnv</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.deep.common.utils.set_seeds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets seeds for reproducibility</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>seed</strong> (<em>int</em>) – Seed Value</p></li>
+<li><p><strong>env</strong> (<em>Gym Environment</em>) – Optionally pass gym environment to set its seed</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.deep.common.values">
+<span id="genrl-deep-common-values-module"></span><h2>genrl.deep.common.values module<a class="headerlink" href="#module-genrl.deep.common.values" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.deep.common.values.CNNValue">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.deep.common.values.</code><code class="sig-name descname">CNNValue</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">action_dim</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">framestack</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">4</span></em>, <em class="sig-param"><span class="n">val_type</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'Qs'</span></em>, <em class="sig-param"><span class="n">fc_layers</span><span class="p">:</span> <span class="n">Tuple</span> <span class="o">=</span> <span class="default_value">256</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.values.CNNValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#genrl.deep.common.base.BaseValue" title="genrl.deep.common.base.BaseValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">genrl.deep.common.base.BaseValue</span></code></a></p>
+<blockquote>
+<div><p>CNN Value Function class</p>
+<dl class="field-list simple">
+<dt class="field-odd">param state_dim</dt>
+<dd class="field-odd"><p>State dimension of environment</p>
+</dd>
+<dt class="field-even">param action_dim</dt>
+<dd class="field-even"><p>Action dimension of environment</p>
+</dd>
+<dt class="field-odd">param framestack</dt>
+<dd class="field-odd"><p>Number of previous frames to stack together</p>
+</dd>
+<dt class="field-even">param val_type</dt>
+<dd class="field-even"><p>Specifies type of value function: (</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt>“V” for V(s), “Qs” for Q(s), “Qsa” for Q(s,a))</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param hidden</dt>
+<dd class="field-odd"><p>Sizes of hidden layers</p>
+</dd>
+<dt class="field-even">type state_dim</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">type action_dim</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+<dt class="field-even">type framestack</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">type val_type</dt>
+<dd class="field-odd"><p>string</p>
+</dd>
+<dt class="field-even">type hidden</dt>
+<dd class="field-even"><p>tuple or list</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.deep.common.values.CNNValue.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">state</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#genrl.deep.common.values.CNNValue.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>Tensor</em>) – Input to value function</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="genrl.deep.common.values.MlpValue">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.deep.common.values.</code><code class="sig-name descname">MlpValue</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">state_dim</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">action_dim</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">val_type</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'V'</span></em>, <em class="sig-param"><span class="n">hidden</span><span class="p">:</span> <span class="n">Tuple</span> <span class="o">=</span> <span class="default_value">32, 32</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.deep.common.values.MlpValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#genrl.deep.common.base.BaseValue" title="genrl.deep.common.base.BaseValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">genrl.deep.common.base.BaseValue</span></code></a></p>
+<blockquote>
+<div><p>MLP Value Function class</p>
+<dl class="field-list simple">
+<dt class="field-odd">param state_dim</dt>
+<dd class="field-odd"><p>State dimensions of environment</p>
+</dd>
+<dt class="field-even">param action_dim</dt>
+<dd class="field-even"><p>Action dimensions of environment</p>
+</dd>
+<dt class="field-odd">param val_type</dt>
+<dd class="field-odd"><p>Specifies type of value function: (</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt>“V” for V(s), “Qs” for Q(s), “Qsa” for Q(s,a))</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param hidden</dt>
+<dd class="field-odd"><p>Sizes of hidden layers</p>
+</dd>
+<dt class="field-even">type state_dim</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">type action_dim</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+<dt class="field-even">type val_type</dt>
+<dd class="field-even"><p>string</p>
+</dd>
+<dt class="field-odd">type hidden</dt>
+<dd class="field-odd"><p>tuple or list</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="genrl.deep.common.values.get_value_from_name">
+<code class="sig-prename descclassname">genrl.deep.common.values.</code><code class="sig-name descname">get_value_from_name</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name_</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; Union<span class="p">[</span>Type<span class="p">[</span><a class="reference internal" href="#genrl.deep.common.values.MlpValue" title="genrl.deep.common.values.MlpValue">genrl.deep.common.values.MlpValue</a><span class="p">]</span><span class="p">, </span>Type<span class="p">[</span><a class="reference internal" href="#genrl.deep.common.values.CNNValue" title="genrl.deep.common.values.CNNValue">genrl.deep.common.values.CNNValue</a><span class="p">]</span><span class="p">]</span><a class="headerlink" href="#genrl.deep.common.values.get_value_from_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the value function given the name of the value function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>string</em>) – Name of the value function needed</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Value function</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.deep.common">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-genrl.deep.common" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Society for Artificial Intelligence and Deep Learning (SAiDL)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

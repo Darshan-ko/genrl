@@ -1,0 +1,702 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>genrl.environments package &mdash; GenRL 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> GenRL
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="algorithms/index.html">Algorithms</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GenRL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>genrl.environments package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/genrl.environments.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="genrl-environments-package">
+<h1>genrl.environments package<a class="headerlink" href="#genrl-environments-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="genrl.environments.vec_env.html">genrl.environments.vec_env package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="genrl.environments.vec_env.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="genrl.environments.vec_env.html#module-genrl.environments.vec_env.utils">genrl.environments.vec_env.utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="genrl.environments.vec_env.html#module-genrl.environments.vec_env.vec_monitor">genrl.environments.vec_env.vec_monitor module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="genrl.environments.vec_env.html#module-genrl.environments.vec_env.vec_normalize">genrl.environments.vec_env.vec_normalize module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="genrl.environments.vec_env.html#module-genrl.environments.vec_env.vec_wrappers">genrl.environments.vec_env.vec_wrappers module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="genrl.environments.vec_env.html#module-genrl.environments.vec_env.vector_envs">genrl.environments.vec_env.vector_envs module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="genrl.environments.vec_env.html#module-genrl.environments.vec_env">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-genrl.environments.action_wrappers">
+<span id="genrl-environments-action-wrappers-module"></span><h2>genrl.environments.action_wrappers module<a class="headerlink" href="#module-genrl.environments.action_wrappers" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.environments.action_wrappers.ClipAction">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.environments.action_wrappers.</code><code class="sig-name descname">ClipAction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">env</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>gym.core.Env<span class="p">, </span><a class="reference internal" href="genrl.environments.vec_env.html#genrl.environments.vec_env.vector_envs.VecEnv" title="genrl.environments.vec_env.vector_envs.VecEnv">genrl.environments.vec_env.vector_envs.VecEnv</a><span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.action_wrappers.ClipAction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">gym.core.ActionWrapper</span></code></p>
+<p>Action Wrapper to clip actions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>env</strong> (<em>object</em>) – The environment whose actions need to be clipped</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.environments.action_wrappers.ClipAction.action">
+<code class="sig-name descname">action</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">action</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#genrl.environments.action_wrappers.ClipAction.action" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="genrl.environments.action_wrappers.RescaleAction">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.environments.action_wrappers.</code><code class="sig-name descname">RescaleAction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">env</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>gym.core.Env<span class="p">, </span><a class="reference internal" href="genrl.environments.vec_env.html#genrl.environments.vec_env.vector_envs.VecEnv" title="genrl.environments.vec_env.vector_envs.VecEnv">genrl.environments.vec_env.vector_envs.VecEnv</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">low</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">high</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.action_wrappers.RescaleAction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">gym.core.ActionWrapper</span></code></p>
+<p>Action Wrapper to rescale actions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>env</strong> (<em>object</em>) – The environment whose actions need to be rescaled</p></li>
+<li><p><strong>low</strong> (<em>int</em>) – Lower limit of action</p></li>
+<li><p><strong>high</strong> (<em>int</em>) – Upper limit of action</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.environments.action_wrappers.RescaleAction.action">
+<code class="sig-name descname">action</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">action</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#genrl.environments.action_wrappers.RescaleAction.action" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.environments.atari_preprocessing">
+<span id="genrl-environments-atari-preprocessing-module"></span><h2>genrl.environments.atari_preprocessing module<a class="headerlink" href="#module-genrl.environments.atari_preprocessing" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.environments.atari_preprocessing.AtariPreprocessing">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.environments.atari_preprocessing.</code><code class="sig-name descname">AtariPreprocessing</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">env</span><span class="p">:</span> <span class="n">gym.core.Env</span></em>, <em class="sig-param"><span class="n">frameskip</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>Tuple<span class="p">, </span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">2, 5</span></em>, <em class="sig-param"><span class="n">grayscale</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">screen_size</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">84</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.atari_preprocessing.AtariPreprocessing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">gym.core.Wrapper</span></code></p>
+<blockquote>
+<div><p>Implementation for Image preprocessing for Gym Atari environments.
+Implements: 1) Frameskip 2) Grayscale 3) Downsampling to square image</p>
+<dl class="field-list simple">
+<dt class="field-odd">param env</dt>
+<dd class="field-odd"><p>Atari environment</p>
+</dd>
+<dt class="field-even">param frameskip</dt>
+<dd class="field-even"><p>Number of steps between actions. E.g. frameskip=4 will mean 1 action will be taken for every 4 frames. It’ll be a tuple</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt>if non-deterministic and a random number will be chosen from (2, 5)</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param grayscale</dt>
+<dd class="field-odd"><p>Whether or not the output should be converted to grayscale</p>
+</dd>
+<dt class="field-even">param screen_size</dt>
+<dd class="field-even"><p>Size of the output screen (square output)</p>
+</dd>
+<dt class="field-odd">type env</dt>
+<dd class="field-odd"><p>Gym Environment</p>
+</dd>
+<dt class="field-even">type frameskip</dt>
+<dd class="field-even"><p>tuple or int</p>
+</dd>
+<dt class="field-odd">type grayscale</dt>
+<dd class="field-odd"><p>boolean</p>
+</dd>
+<dt class="field-even">type screen_size</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.environments.atari_preprocessing.AtariPreprocessing.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#genrl.environments.atari_preprocessing.AtariPreprocessing.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets state of environment</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Initial state</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>NumPy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.atari_preprocessing.AtariPreprocessing.step">
+<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">action</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#genrl.environments.atari_preprocessing.AtariPreprocessing.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Step through Atari environment for given action</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>action</strong> (<em>NumPy array</em>) – Action taken by agent</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Current state, reward(for frameskip number of actions), done, info</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.environments.atari_wrappers">
+<span id="genrl-environments-atari-wrappers-module"></span><h2>genrl.environments.atari_wrappers module<a class="headerlink" href="#module-genrl.environments.atari_wrappers" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.environments.atari_wrappers.FireReset">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.environments.atari_wrappers.</code><code class="sig-name descname">FireReset</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">env</span><span class="p">:</span> <span class="n">gym.core.Env</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.atari_wrappers.FireReset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">gym.core.Wrapper</span></code></p>
+<p>Some Atari environments do not actually do anything until a specific action (the fire action) is taken, so we make it take the action before starting the training process</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>env</strong> (<em>Gym Environment</em>) – Atari environment</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.environments.atari_wrappers.FireReset.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#genrl.environments.atari_wrappers.FireReset.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets state of environment. Performs the noop action a random number of times to introduce stochasticity</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Initial state</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>NumPy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="genrl.environments.atari_wrappers.NoopReset">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.environments.atari_wrappers.</code><code class="sig-name descname">NoopReset</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">env</span><span class="p">:</span> <span class="n">gym.core.Env</span></em>, <em class="sig-param"><span class="n">max_noops</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">30</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.atari_wrappers.NoopReset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">gym.core.Wrapper</span></code></p>
+<p>Some Atari environments always reset to the same state. So we take a random number of some empty (noop) action to introduce some stochasticity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>env</strong> (<em>Gym Environment</em>) – Atari environment</p></li>
+<li><p><strong>max_noops</strong> (<em>int</em>) – Maximum number of Noops to be taken</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.environments.atari_wrappers.NoopReset.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#genrl.environments.atari_wrappers.NoopReset.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets state of environment. Performs the noop action a random number of times to introduce stochasticity</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Initial state</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>NumPy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.atari_wrappers.NoopReset.step">
+<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">action</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#genrl.environments.atari_wrappers.NoopReset.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Step through underlying Atari environment for given action</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>action</strong> (<em>NumPy array</em>) – Action taken by agent</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Current state, reward(for frameskip number of actions), done, info</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.environments.base_wrapper">
+<span id="genrl-environments-base-wrapper-module"></span><h2>genrl.environments.base_wrapper module<a class="headerlink" href="#module-genrl.environments.base_wrapper" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.environments.base_wrapper.BaseWrapper">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.environments.base_wrapper.</code><code class="sig-name descname">BaseWrapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">env</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">batch_size</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.base_wrapper.BaseWrapper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>Base class for all wrappers</p>
+<dl class="py method">
+<dt id="genrl.environments.base_wrapper.BaseWrapper.batch_size">
+<em class="property">property </em><code class="sig-name descname">batch_size</code><a class="headerlink" href="#genrl.environments.base_wrapper.BaseWrapper.batch_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of batches trained per update</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.base_wrapper.BaseWrapper.close">
+<em class="property">abstract </em><code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.environments.base_wrapper.BaseWrapper.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Closes environment and performs any other cleanup</p>
+<p>Must be overridden by subclasses</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.base_wrapper.BaseWrapper.render">
+<em class="property">abstract </em><code class="sig-name descname">render</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.environments.base_wrapper.BaseWrapper.render" title="Permalink to this definition">¶</a></dt>
+<dd><p>Render the environment</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.base_wrapper.BaseWrapper.reset">
+<em class="property">abstract </em><code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.environments.base_wrapper.BaseWrapper.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets state of environment</p>
+<p>Must be overriden by subclasses</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Initial state</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.base_wrapper.BaseWrapper.seed">
+<em class="property">abstract </em><code class="sig-name descname">seed</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">seed</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.environments.base_wrapper.BaseWrapper.seed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set seed for environment</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.base_wrapper.BaseWrapper.step">
+<em class="property">abstract </em><code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">action</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.environments.base_wrapper.BaseWrapper.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Step through the environment</p>
+<p>Must be overriden by subclasses</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.environments.frame_stack">
+<span id="genrl-environments-frame-stack-module"></span><h2>genrl.environments.frame_stack module<a class="headerlink" href="#module-genrl.environments.frame_stack" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.environments.frame_stack.FrameStack">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.environments.frame_stack.</code><code class="sig-name descname">FrameStack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">env</span><span class="p">:</span> <span class="n">gym.core.Env</span></em>, <em class="sig-param"><span class="n">framestack</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">4</span></em>, <em class="sig-param"><span class="n">compress</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.frame_stack.FrameStack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">gym.core.Wrapper</span></code></p>
+<p>Wrapper to stack the last few(4 by default) observations of agent efficiently</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>env</strong> (<em>Gym Environment</em>) – Environment to be wrapped</p></li>
+<li><p><strong>framestack</strong> (<em>int</em>) – Number of frames to be stacked</p></li>
+<li><p><strong>compress</strong> (<em>bool</em>) – True if we want to use LZ4 compression to conserve memory usage</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.environments.frame_stack.FrameStack.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#genrl.environments.frame_stack.FrameStack.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets environment</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Initial state of environment</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>NumPy Array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.frame_stack.FrameStack.step">
+<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">action</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#genrl.environments.frame_stack.FrameStack.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Steps through environment</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>action</strong> (<em>NumPy Array</em>) – Action taken by agent</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Next state, reward, done, info</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>NumPy Array, float, boolean, dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="genrl.environments.frame_stack.LazyFrames">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.environments.frame_stack.</code><code class="sig-name descname">LazyFrames</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">frames</span><span class="p">:</span> <span class="n">List</span></em>, <em class="sig-param"><span class="n">compress</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.frame_stack.LazyFrames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Efficient data structure to save each frame only once. Can use LZ4 compression to optimizer memory usage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>frames</strong> (<em>collections.deque</em>) – List of frames that needs to converted to a LazyFrames data structure</p></li>
+<li><p><strong>compress</strong> (<em>boolean</em>) – True if we want to use LZ4 compression to conserve memory usage</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.environments.frame_stack.LazyFrames.shape">
+<em class="property">property </em><code class="sig-name descname">shape</code><a class="headerlink" href="#genrl.environments.frame_stack.LazyFrames.shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns dimensions of other object</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.environments.gym_wrapper">
+<span id="genrl-environments-gym-wrapper-module"></span><h2>genrl.environments.gym_wrapper module<a class="headerlink" href="#module-genrl.environments.gym_wrapper" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.environments.gym_wrapper.GymWrapper">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.environments.gym_wrapper.</code><code class="sig-name descname">GymWrapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">env</span><span class="p">:</span> <span class="n">gym.core.Env</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.environments.gym_wrapper.GymWrapper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">gym.core.Wrapper</span></code></p>
+<p>Wrapper class for all Gym Environments</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>env</strong> (<em>string</em>) – Gym environment name</p></li>
+<li><p><strong>n_envs</strong> (<em>None</em><em>, </em><em>int</em>) – Number of environments. None if not vectorised</p></li>
+<li><p><strong>parallel</strong> (<em>boolean</em>) – If vectorised, should environments be run through serially or parallelly</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.environments.gym_wrapper.GymWrapper.action_shape">
+<em class="property">property </em><code class="sig-name descname">action_shape</code><a class="headerlink" href="#genrl.environments.gym_wrapper.GymWrapper.action_shape" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.gym_wrapper.GymWrapper.close">
+<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.environments.gym_wrapper.GymWrapper.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Closes environment</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.gym_wrapper.GymWrapper.render">
+<code class="sig-name descname">render</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mode</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'human'</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.environments.gym_wrapper.GymWrapper.render" title="Permalink to this definition">¶</a></dt>
+<dd><p>Renders all envs in a tiles format similar to baselines.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mode</strong> (<em>string</em>) – Can either be ‘human’ or ‘rgb_array’. Displays tiled images in ‘human’ and returns tiled images in ‘rgb_array’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.gym_wrapper.GymWrapper.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#genrl.environments.gym_wrapper.GymWrapper.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets environment</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Initial state</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.gym_wrapper.GymWrapper.sample">
+<code class="sig-name descname">sample</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#genrl.environments.gym_wrapper.GymWrapper.sample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shortcut method to directly sample from environment’s action space</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Random action from action space</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>NumPy Array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.gym_wrapper.GymWrapper.seed">
+<code class="sig-name descname">seed</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">seed</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.environments.gym_wrapper.GymWrapper.seed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set environment seed</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>seed</strong> (<em>int</em>) – Value of seed</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.environments.gym_wrapper.GymWrapper.step">
+<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">action</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#genrl.environments.gym_wrapper.GymWrapper.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Steps the env through given action</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>action</strong> (<em>NumPy array</em>) – Action taken by agent</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Next observation, reward, game status and debugging info</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.environments.suite">
+<span id="genrl-environments-suite-module"></span><h2>genrl.environments.suite module<a class="headerlink" href="#module-genrl.environments.suite" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="genrl.environments.suite.AtariEnv">
+<code class="sig-prename descclassname">genrl.environments.suite.</code><code class="sig-name descname">AtariEnv</code><span class="sig-paren">(</span><em class="sig-param">env_id: str, wrapper_list: List = [&lt;class 'genrl.environments.atari_preprocessing.AtariPreprocessing'&gt;, &lt;class 'genrl.environments.atari_wrappers.NoopReset'&gt;, &lt;class 'genrl.environments.frame_stack.FrameStack'&gt;]</em><span class="sig-paren">)</span> &#x2192; gym.core.Env<a class="headerlink" href="#genrl.environments.suite.AtariEnv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to apply wrappers for all Atari envs by Trainer class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>env</strong> (<em>string</em>) – Environment Name</p></li>
+<li><p><strong>wrapper_list</strong> (<em>list</em><em> or </em><em>tuple</em>) – List of wrappers to use</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Gym Atari Environment</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="genrl.environments.suite.GymEnv">
+<code class="sig-prename descclassname">genrl.environments.suite.</code><code class="sig-name descname">GymEnv</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">env_id</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; gym.core.Env<a class="headerlink" href="#genrl.environments.suite.GymEnv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to apply wrappers for all regular Gym envs by Trainer class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>env</strong> (<em>string</em>) – Environment Name</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Gym Environment</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="genrl.environments.suite.VectorEnv">
+<code class="sig-prename descclassname">genrl.environments.suite.</code><code class="sig-name descname">VectorEnv</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">env_id</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">n_envs</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">2</span></em>, <em class="sig-param"><span class="n">parallel</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">env_type</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'gym'</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="genrl.environments.vec_env.html#genrl.environments.vec_env.vector_envs.VecEnv" title="genrl.environments.vec_env.vector_envs.VecEnv">genrl.environments.vec_env.vector_envs.VecEnv</a><a class="headerlink" href="#genrl.environments.suite.VectorEnv" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Chooses the kind of Vector Environment that is required</p>
+<dl class="field-list simple">
+<dt class="field-odd">param env_id</dt>
+<dd class="field-odd"><p>Gym environment to be vectorised</p>
+</dd>
+<dt class="field-even">param n_envs</dt>
+<dd class="field-even"><p>Number of environments</p>
+</dd>
+<dt class="field-odd">param parallel</dt>
+<dd class="field-odd"><p>True if we want environments to run parallely and (</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt>subprocesses, False if we want environments to run serially one after the other)</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param env_type</dt>
+<dd class="field-odd"><p>Type of environment. Currently, we support [“gym”, “atari”]</p>
+</dd>
+<dt class="field-even">type env_id</dt>
+<dd class="field-even"><p>string</p>
+</dd>
+<dt class="field-odd">type n_envs</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+<dt class="field-even">type parallel</dt>
+<dd class="field-even"><p>False</p>
+</dd>
+<dt class="field-odd">type env_type</dt>
+<dd class="field-odd"><p>string</p>
+</dd>
+<dt class="field-even">returns</dt>
+<dd class="field-even"><p>Vector Environment</p>
+</dd>
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.environments">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-genrl.environments" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Society for Artificial Intelligence and Deep Learning (SAiDL)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

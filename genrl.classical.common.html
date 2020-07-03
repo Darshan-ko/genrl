@@ -1,0 +1,403 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>genrl.classical.common package &mdash; GenRL 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> GenRL
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="algorithms/index.html">Algorithms</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GenRL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>genrl.classical.common package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/genrl.classical.common.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="genrl-classical-common-package">
+<h1>genrl.classical.common package<a class="headerlink" href="#genrl-classical-common-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-genrl.classical.common.models">
+<span id="genrl-classical-common-models-module"></span><h2>genrl.classical.common.models module<a class="headerlink" href="#module-genrl.classical.common.models" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.classical.common.models.TabularModel">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.classical.common.models.</code><code class="sig-name descname">TabularModel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">s_dim</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">a_dim</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.classical.common.models.TabularModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Sample-based tabular model class for deterministic, discrete environments</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s_dim</strong> (<em>int</em>) – environment state dimension</p></li>
+<li><p><strong>a_dim</strong> (<em>int</em>) – environment action dimension</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.classical.common.models.TabularModel.add">
+<code class="sig-name descname">add</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">state</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em>, <em class="sig-param"><span class="n">action</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em>, <em class="sig-param"><span class="n">reward</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">next_state</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.classical.common.models.TabularModel.add" title="Permalink to this definition">¶</a></dt>
+<dd><p>add transition to model
+:param state: state
+:param action: action
+:param reward: reward
+:param next_state: next state
+:type state: float array
+:type action: int
+:type reward: int
+:type next_state: float array</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.common.models.TabularModel.is_empty">
+<code class="sig-name descname">is_empty</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#genrl.classical.common.models.TabularModel.is_empty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the model has been updated or not</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if model not updated yet</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.common.models.TabularModel.sample">
+<code class="sig-name descname">sample</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Tuple<a class="headerlink" href="#genrl.classical.common.models.TabularModel.sample" title="Permalink to this definition">¶</a></dt>
+<dd><p>sample state action pair from model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>state and action</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int, float, .. ; int, float, ..</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.common.models.TabularModel.step">
+<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">state</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em>, <em class="sig-param"><span class="n">action</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em><span class="sig-paren">)</span> &#x2192; Tuple<a class="headerlink" href="#genrl.classical.common.models.TabularModel.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>return consequence of action at state</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>reward and next state</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int; int, float, ..</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="genrl.classical.common.models.get_model_from_name">
+<code class="sig-prename descclassname">genrl.classical.common.models.</code><code class="sig-name descname">get_model_from_name</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name_</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.classical.common.models.get_model_from_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>get model object from name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – name of the model [‘tabular’]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the model</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.classical.common.trainer">
+<span id="genrl-classical-common-trainer-module"></span><h2>genrl.classical.common.trainer module<a class="headerlink" href="#module-genrl.classical.common.trainer" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.classical.common.trainer.Trainer">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.classical.common.trainer.</code><code class="sig-name descname">Trainer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">agent</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">env</span><span class="p">:</span> <span class="n">gym.core.Env</span></em>, <em class="sig-param"><span class="n">mode</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'learn'</span></em>, <em class="sig-param"><span class="n">model</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">n_episodes</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">30000</span></em>, <em class="sig-param"><span class="n">plan_n_steps</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">3</span></em>, <em class="sig-param"><span class="n">start_steps</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">5000</span></em>, <em class="sig-param"><span class="n">start_plan</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">50</span></em>, <em class="sig-param"><span class="n">evaluate_frequency</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">500</span></em>, <em class="sig-param"><span class="n">seed</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">render</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.classical.common.trainer.Trainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Global trainer class for classical RL algorithms</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>agent</strong> (<em>object</em>) – Algorithm object to train</p></li>
+<li><p><strong>env</strong> (<em>Gym environment</em>) – standard gym environment to train on</p></li>
+<li><p><strong>mode</strong> (<em>str</em>) – mode of value function update [‘learn’, ‘plan’, ‘dyna’]</p></li>
+<li><p><strong>model</strong> (<em>str</em>) – model to use for planning [‘tabular’]</p></li>
+<li><p><strong>n_episodes</strong> (<em>int</em>) – number of training episodes</p></li>
+<li><p><strong>plan_n_steps</strong> (<em>int</em>) – number of planning step per environment interaction</p></li>
+<li><p><strong>start_steps</strong> (<em>int</em>) – number of initial exploration timesteps</p></li>
+<li><p><strong>seed</strong> (<em>int</em>) – seed for random number generator</p></li>
+<li><p><strong>render</strong> (<em>bool</em>) – render gym environment</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.classical.common.trainer.Trainer.evaluate">
+<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">eval_ep</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">100</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.classical.common.trainer.Trainer.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>eval_ep</strong> (<em>int</em>) – Number of episodes you want to evaluate for</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.common.trainer.Trainer.learn">
+<code class="sig-name descname">learn</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">transitions</span><span class="p">:</span> <span class="n">Tuple</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.classical.common.trainer.Trainer.learn" title="Permalink to this definition">¶</a></dt>
+<dd><p>learn from transition tuples</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>transitions</strong> (<em>tuple</em>) – s, a, r, s’ transition</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.common.trainer.Trainer.plan">
+<code class="sig-name descname">plan</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.classical.common.trainer.Trainer.plan" title="Permalink to this definition">¶</a></dt>
+<dd><p>plans on samples drawn from model</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.common.trainer.Trainer.plot">
+<code class="sig-name descname">plot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">results</span><span class="p">:</span> <span class="n">List<span class="p">[</span>float<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">window_size</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">100</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.classical.common.trainer.Trainer.plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>plot model rewards
+:param results: rewards for each episode
+:param window_size: size of moving average filter
+:type results: int
+:type window_size: int</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genrl.classical.common.trainer.Trainer.train">
+<code class="sig-name descname">train</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span>float<span class="p">]</span><a class="headerlink" href="#genrl.classical.common.trainer.Trainer.train" title="Permalink to this definition">¶</a></dt>
+<dd><p>general training loop for classical RL</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.classical.common.values">
+<span id="genrl-classical-common-values-module"></span><h2>genrl.classical.common.values module<a class="headerlink" href="#module-genrl.classical.common.values" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="genrl.classical.common.values.BaseValue">
+<em class="property">class </em><code class="sig-prename descclassname">genrl.classical.common.values.</code><code class="sig-name descname">BaseValue</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">state_dim</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">action_dim</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="headerlink" href="#genrl.classical.common.values.BaseValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>MLP Value Function class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_dim</strong> (<em>int</em>) – State dimensions of environment</p></li>
+<li><p><strong>action_dim</strong> (<em>int</em>) – Action dimensions of environment</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genrl.classical.common.values.BaseValue.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">state</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">action</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">reward</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>float<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.classical.common.values.BaseValue.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the value estimate</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> (<em>int</em>) – state</p></li>
+<li><p><strong>action</strong> (<em>int</em>) – action</p></li>
+<li><p><strong>reward</strong> (<em>int</em><em> or </em><em>float</em>) – reward</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="genrl.classical.common.values.get_value_from_name">
+<code class="sig-prename descclassname">genrl.classical.common.values.</code><code class="sig-name descname">get_value_from_name</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name_</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genrl.classical.common.values.get_value_from_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the value function given the name of the value function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>string</em>) – Name of the value function needed</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Value function</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-genrl.classical.common">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-genrl.classical.common" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Society for Artificial Intelligence and Deep Learning (SAiDL)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
